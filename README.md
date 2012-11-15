@@ -1,4 +1,4 @@
 SIGP
 ====
 
-Sistema Intergalactico Gostoso Praporra
+Sistema InterGalactico Parrudo
