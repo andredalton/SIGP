@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: hardy
+Build-Jdk: 1.6.0_24
+Implementation-Title: hibernate-validator-annotation-processor
+Implementation-URL: http://validator.hibernate.org/hibernate-validator
+ -annotation-processor
+Implementation-Vendor: org.hibernate
+Implementation-Vendor-Id: org.hibernate
+Implementation-Version: 4.2.0.Final
+Specification-Title: Bean Validation
+

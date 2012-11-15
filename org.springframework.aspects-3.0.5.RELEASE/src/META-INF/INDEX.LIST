@@ -1,0 +1,19 @@
+JarIndex-Version: 1.0
+
+org.springframework.aspects.jar
+org
+org/springframework
+org/springframework/beans
+org/springframework/beans/factory
+org/springframework/beans/factory/aspectj
+org/springframework/mock
+org/springframework/mock/staticmock
+org/springframework/orm
+org/springframework/orm/jpa
+org/springframework/orm/jpa/aspectj
+org/springframework/scheduling
+org/springframework/scheduling/aspectj
+org/springframework/transaction
+org/springframework/transaction/aspectj
+overview.html
+
