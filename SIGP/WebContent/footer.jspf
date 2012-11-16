@@ -85,7 +85,7 @@
 				<div id="copyright">                
 					License:
 					<br />
-		            <a href="http://creativecommons.org/licenses/by/3.0/deed.pt_BR" target=_blank><img src="images/creativecommons_by.png" alt="Creative Commons License"></a>
+		            <a href="http://creativecommons.org/licenses/by/3.0/deed.pt_BR" target=_blank><img src="<c:url value='/images/creativecommons_by.png'></c:url>" alt="Creative Commons License"></a>
 				</div><!-- end copyright -->
 				                    
 				<a href="#" class="scroll-top">Top</a>

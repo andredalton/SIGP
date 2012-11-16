@@ -129,7 +129,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<c:url value='/publicacao/'></c:url>" <c:if test="${headername == 'publicacao'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/publicacoes/'></c:url>" <c:if test="${headername == 'publicacao'}">class="active-nav"</c:if>>
                     	Publications
                     </a>
                 </li>
@@ -147,6 +147,15 @@
                     <a href="<c:url value='/adm/'></c:url>" <c:if test="${headername == 'adm'}">class="active-nav"</c:if>>
                     	Adm
                     </a>
+                    <br />
+                    <br />
+                    <ul>
+                        <li>
+                        	<a href="<c:url value='/marcador/lista'></c:url>">
+                            	Lista de Marcadores
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
@@ -167,9 +176,3 @@
 			</c:forEach>
 		</ul>
 	</div>
-	
-		<div id="menu">
-			<ul>
-				<li><a href="<c:url value="/marcador/lista"/>">Lista de Marcadores</a></li>
-			</ul>
-		</div>
