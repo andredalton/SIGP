@@ -86,12 +86,13 @@
 					</a><%-- &nbsp;<a href="<c:url value="/lang/mudarLingua?lingua=pt"></c:url>" class="active">Português, Brasil</a> --%>
 				</span> 
 			</div>
-			<div id="logo">
-				<img src="<c:url value='/images/lapessc_small.gif'></c:url>" alt="LAPPESC" />
-				<br />
+			<div id="logoWrapper">
+				<div id="logo">
+					<img src="<c:url value='/images/lapessc_small.gif'></c:url>" alt="LAPPESC" />
+				</div>
 				<div id="title">
 					<h1>
-						<nobr>Software Engineering &</nobr> <nobr>Collaborative Systems</nobr> <nobr>Research Lab</nobr>
+						Software Engineering & Collaborative Systems Research Lab
 					</h1>
 				</div><!-- end title -->
 			</div>

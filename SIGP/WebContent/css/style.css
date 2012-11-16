@@ -444,55 +444,50 @@ ol li {
 	/*background: url(../img/back-light-1.png) no-repeat left center; (removed from the original CSS)*/
 	padding: 20px 0 0 0;
 }
+#language-float {
+	float: right;
+}
+
+#logoWrapper {
+	margin-bottom: 10px;
+}
+
+#logo {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
 
 #title {
-	float: left;
+	display: inline-block;
+	vertical-align: top;
+	height: 30px;
+	padding-top: 10px;
 }
 
-#logo{
-	position:relative;
-	margin-bottom:10px;
-}
-
-#logo h1 {
+#title h1 {
 	font-family: Bebas, Arial, sans-serif;	
 	color: #f7f7f7;
-	padding-top: 10px;
-	margin-bottom: 3px;
 	font-size: 20px;
 	text-shadow: 1px 1px 1px #262626;
 	letter-spacing: 1px;
 	font-weight: normal;
-	height:30px;
-	position:absolute; top:50%; margin-top:-15px;
+	height: 100%;
 }
 
-#logo h1 a {
+#title h1 a {
 	color: #f7f7f7;
 	text-decoration: none;
 }
 
-#logo h1 a:hover {
+#title h1 a:hover {
 	text-decoration: none;
-}
-
-#logo p {	
-	font-size: 10px;
-	text-transform: uppercase;
-	margin-bottom: 0;
-	color: #f7f7f7;
-}
-
-#logo img {
-	float: left;
-	margin-right: 10px;
 }
 
 /*====NAVIGATION
 =======================================================*/
 
 #navigation {
-	margin-top: 20px;
 	z-index: 1200;
 }
 
@@ -1120,7 +1115,7 @@ ul#navigation li li li.sfHover ul {
 	width: 930px;
 	margin: 0 auto;
 	overflow: hidden;
-	height: 200px;
+	height: 100px;
 }
 
 #page-headline h2 {
