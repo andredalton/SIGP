@@ -105,7 +105,7 @@
                 </li>
                 <li>
 					<a href="<c:url value='/lines/'></c:url>" <c:if test="${headername == 'linha'}">class="active-nav"</c:if>>
-						<fmt:message key="header.linhaspesquisa" />
+						Research Lines
                     </a>
                     <br />
                     <br />
@@ -124,22 +124,22 @@
                 </li>
                 <li>
                     <a href="<c:url value='/projeto/'></c:url>" <c:if test="${headername == 'projeto'}">class="active-nav"</c:if>>
-                    	<fmt:message key="header.projetos" />
+                    	Projects
                     </a>
                 </li>
                 <li>
                     <a href="<c:url value='/publicacao/'></c:url>" <c:if test="${headername == 'publicacao'}">class="active-nav"</c:if>>
-                    	<fmt:message key="header.publicacoes" />
+                    	Publications
                     </a>
                 </li>
                 <li>
                     <a href="<c:url value='/software/'></c:url>" <c:if test="${headername == 'software'}">class="active-nav"</c:if>>
-                    	<fmt:message key="header.software" />
+                    	Software
                     </a>
                 </li>
                 <li>
                     <a href="<c:url value='/contribuinte/'></c:url>" <c:if test="${headername == 'membro'}">class="active-nav"</c:if>>
-                    	<fmt:message key="header.contribuintes" />
+                    	Members
                     </a>
                 </li>
                 <li>

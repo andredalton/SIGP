@@ -459,7 +459,7 @@ ol li {
 	color: #f7f7f7;
 	padding-top: 10px;
 	margin-bottom: 3px;
-	font-size: 30px;
+	font-size: 20px;
 	text-shadow: 1px 1px 1px #262626;
 	letter-spacing: 1px;
 	font-weight: normal;
@@ -492,9 +492,7 @@ ol li {
 =======================================================*/
 
 #navigation {
-	float: right;
-	margin-top: 2px;
-	position: relative;
+	margin-top: 20px;
 	z-index: 1200;
 }
 
@@ -1986,7 +1984,6 @@ label {
 	position: relative;
 	border-top: 1px solid #434343;
 	overflow: hidden;
-	height: 1%;
 }
 
 #footer-logo {
