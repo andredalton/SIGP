@@ -117,14 +117,14 @@
                             </a>
                         </li>
                         <li>
-                        	<a href="<c:url value='/plines/'></c:url>">
+                        	<a href="<c:url value='/lines/previous'></c:url>">
                             	Previous
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="<c:url value='/projeto/'></c:url>" <c:if test="${headername == 'projeto'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/projetos/'></c:url>" <c:if test="${headername == 'projeto'}">class="active-nav"</c:if>>
                     	Projects
                     </a>
                 </li>
@@ -134,18 +134,23 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<c:url value='/software/'></c:url>" <c:if test="${headername == 'software'}">class="active-nav"</c:if>>
-                    	Software
-                    </a>
-                </li>
-                <li>
-                    <a href="<c:url value='/contribuinte/'></c:url>" <c:if test="${headername == 'membro'}">class="active-nav"</c:if>>
-                    	Members
-                    </a>
-                </li>
-                <li>
-                    <a href="<c:url value='/contact/'></c:url>">
+                    <a href="<c:url value='/contact/'></c:url>" <c:if test="${headername == 'contato'}">class="active-nav"</c:if>>
                     	Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="<c:url value='/pessoas/'></c:url>" <c:if test="${headername == 'pessoas'}">class="active-nav"</c:if>>
+                    	People
+                    </a>
+                </li>
+                <li>
+                    <a href="<c:url value='/adm/'></c:url>" <c:if test="${headername == 'adm'}">class="active-nav"</c:if>>
+                    	Adm
+                    </a>
+                </li>
+                <li>
+                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
+                    	Org
                     </a>
                 </li>
             </ul>

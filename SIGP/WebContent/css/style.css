@@ -1481,7 +1481,6 @@ ul#navigation li li li.sfHover ul {
 
 .gallery-thumbs-caption {
 	overflow: hidden;
-	height: 1%;
 }
 
 .gallery-overlay {
@@ -2067,7 +2066,6 @@ label {
 
 .footer-portfolio {
 	overflow: hidden;
-	height: 1%;
 }
 
 .footer-portfolio .box-title {
