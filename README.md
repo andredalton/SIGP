@@ -1,4 +1,0 @@
-SIGP
-====
-
-Sistema InterGalactico Parrudo
