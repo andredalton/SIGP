@@ -12,10 +12,6 @@
           <query>SELECT obj FROM Topico obj</query>
      </named-query>
 
-     <named-query name="selectPublicacao">
-          <query>SELECT obj FROM Publicacao obj</query>
-     </named-query>
-
      <named-query name="selectTopicosdomarcadorpai">
           <query>SELECT obj FROM Topico obj WHERE obj.id.marcadorpai LIKE ?</query>
      </named-query>

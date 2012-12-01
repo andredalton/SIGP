@@ -65,7 +65,7 @@ public class Publicacao implements Serializable
 
 	protected String citacaourl;
 
-	//protected long citacoes;
+	protected long citacoes;
 
 	/**
 	 * Method 'Publicacao'
@@ -648,20 +648,20 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return long
 	 */
-	/*@Column(name="citacoes")
+	@Column(name="citacoes")
 	public long getCitacoes()
 	{
 		return citacoes;
-	}*/
+	}
 
 	/**
 	 * Method 'setCitacoes'
 	 * 
 	 * @param citacoes
 	 */
-	/*public void setCitacoes(long citacoes)
+	public void setCitacoes(long citacoes)
 	{
 		this.citacoes = citacoes;
-	}*/
+	}
 
 }

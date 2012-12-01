@@ -18,9 +18,9 @@
 				<div style="display: inline-block; width: 450px">
 					<h2>Full List</h2>
 					<ol class="custom-list">
-						<c:forEach items="${publicacao}" var="publicacao">
+						<c:forEach items="${publicacoes}" var="publicacao">
 							<li>
-								<strong>"<a href="<c:url value="/publicacao/ver/${publicacao.id}"></c:url>">${publicacao.titulo}</a>"</strong>
+								<strong>"<a href="<c:url value="/publicacao/ver/${publicacao.idPublicacao}"></c:url>">${publicacao.titulo}</a>"</strong>
 					        </li>
 					    </c:forEach>
 					</ol>
