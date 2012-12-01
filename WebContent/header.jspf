@@ -73,6 +73,7 @@
 <body>
 	<div id="header" class="pattern-1">
 		<div id="header-inner">
+			<!--
 			<div id="language-float">
 				<span class="i18n-link">
 					<a href="<c:url value="/lang/mudarLingua?lingua=en"></c:url>">
@@ -86,6 +87,7 @@
 					</a><%-- &nbsp;<a href="<c:url value="/lang/mudarLingua?lingua=pt"></c:url>" class="active">Português, Brasil</a> --%>
 				</span> 
 			</div>
+			-->
 			<div id="logoWrapper">
 				<div id="logo">
 					<img src="<c:url value='/images/lapessc_small.gif'></c:url>" alt="LAPPESC" />
@@ -138,58 +140,77 @@
                     	Contact
                     </a>
                 </li>
+                
+                <!--
                 <li>
                     <a href="<c:url value='/pessoas/'></c:url>" <c:if test="${headername == 'pessoas'}">class="active-nav"</c:if>>
                     	People
                     </a>
                 </li>
+                 -->
+                 
                 <li>
                     <a href="<c:url value='/adm/'></c:url>" <c:if test="${headername == 'adm'}">class="active-nav"</c:if>>
-                    	Adm
+                    	Administration
                     </a>
                     <br />
                     <br />
                     <ul>
                         <li>
                         	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Marcadores
+                            	Tags
                             </a>
                         </li>
                         <li>
-                        	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Linhas de Pesquisa
+                        	<a href="<c:url value='/pesquisa/lista'></c:url>">
+                            	Reserch Lines
                             </a>
                         </li>
                         <li>
-                        	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Dados do Grupo de Pesquisa
+                        	<a href="<c:url value='/dado/lista'></c:url>">
+                            	Reserch Group Data
                             </a>
                         </li>
                         <li>
-                        	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Projetos de Pesquisa
+                        	<a href="<c:url value='/projeto/lista'></c:url>">
+                            	Reserch Project
                             </a>
                         </li>
                         <li>
-                        	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Colaboradores
+                        	<a href="<c:url value='/colaborador/lista'></c:url>">
+                            	Contributors
                             </a>
                         </li>
                         <li>
-                        	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Grupos de Pesquisa Associados
+                        	<a href="<c:url value='/associados/lista'></c:url>">
+                            	Reserch Groups Associates
                             </a>
                         </li>
                         <li>
-                        	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Notícias
+                        	<a href="<c:url value='/noticias/lista'></c:url>">
+                            	News
                             </a>
                         </li>
                     </ul>
                 </li>
+                
+                <!-- 
                 <li>
                     <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
                     	Org
+                    </a>
+                </li>
+                -->
+                
+                <li>
+                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
+                    	Login
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
+                    	Logout
                     </a>
                 </li>
             </ul>
@@ -199,6 +220,7 @@
             <!-- end clearfix -->
         </div>
 	</div>
+	
 	<div id="erros">
 		<ul>
 			<c:forEach items="${errors}" var="error">
