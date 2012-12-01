@@ -11,16 +11,16 @@ import br.usp.ime.sigp.jpa.BaseEntityString;
 import br.usp.ime.sigp.modelo.Marcador;
 
 @Resource
-public class PessoasController {
+public class PeopleController {
     private final GenericDAOString dao;
     private final Result result;
 
-    public PessoasController(GenericDAOString dao, Result result) {
+    public PeopleController(GenericDAOString dao, Result result) {
          this.result   = result;
          this.dao      = dao;
     }
 
-    @Path({"/pessoas/", "/pessoas"})
+    @Path({"/people/", "/people"})
     public void index() {
     }
 }

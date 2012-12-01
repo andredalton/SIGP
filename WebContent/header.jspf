@@ -136,6 +136,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="<c:url value='/people/'></c:url>" <c:if test="${headername == 'people'}">class="active-nav"</c:if>>
+                    	People
+                    </a>
+                </li>
+                <li>
                     <a href="<c:url value='/contact/'></c:url>" <c:if test="${headername == 'contato'}">class="active-nav"</c:if>>
                     	Contact
                     </a>
@@ -203,7 +208,7 @@
                 -->
                 
                 <li>
-                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
                     	Login
                     </a>
                 </li>
