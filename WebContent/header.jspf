@@ -203,13 +203,13 @@
                 -->
                 
                 <li>
-                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'login'}">class="active-nav"</c:if>>
                     	Login
                     </a>
                 </li>
                 
                 <li>
-                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'logout'}">class="active-nav"</c:if>>
                     	Logout
                     </a>
                 </li>
