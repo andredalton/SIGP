@@ -8,7 +8,7 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.usp.ime.sigp.dao.GenericDAOString;
 import br.usp.ime.sigp.jpa.BaseEntityString;
-import br.usp.ime.sigp.modelo.Marcador;
+import br.usp.ime.sigp.modelo.Colaborador;
 
 @Resource
 public class PeopleController {
@@ -24,5 +24,13 @@ public class PeopleController {
     public void index() {
         List<BaseEntityString> people = dao.selectByNamedQuery("selectPeople");
         result.include("people", people);
+    }
+    
+    @Path("/people/{person.id}")
+    public void person(Colaborador person) {
+         person = (Colaborador) dao.selectById(person);
+         if(person != null) {
+              result.include("person", person);
+         }
     }
 }

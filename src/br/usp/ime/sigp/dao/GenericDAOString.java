@@ -8,6 +8,7 @@ import javax.persistence.Query;
 import br.com.caelum.vraptor.ioc.Component;
 import br.usp.ime.sigp.jpa.BaseEntityString;
 import br.usp.ime.sigp.jpa.JPAFactory;
+import br.usp.ime.sigp.modelo.Colaborador;
 
 @Component
 public class GenericDAOString {
@@ -64,6 +65,12 @@ public class GenericDAOString {
 			ex.printStackTrace();
 		}
 		return null;
+	}
+
+	public Colaborador selectById(Colaborador person) {
+		person = (Colaborador) manager.find(person.getClass(),
+				person.getId());
+		return person;
 	}
 
 }
