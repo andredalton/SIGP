@@ -24,22 +24,14 @@
 		</c:choose>
     
 		<div id="contents">
-		
-		
-				ijashdibeebfwa
-				
-				
-				
-				${peoples}
-				
-				<c:forEach items="${peoples}" var="person">
+			<table>
+				<c:forEach items="${people}" var="person">
 					<tr>
 						<td>${person.id}</td>
 						<td>${person.nomecompleto}</td>
 					</tr>
 				</c:forEach>
-		
-		
+			</table>
 		
 		
 			<h2 class="top"><fmt:message key="header.contribuintes" /></h2>
