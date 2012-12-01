@@ -19,5 +19,16 @@
      <named-query name="selectTopicosdomarcadorpai">
           <query>SELECT obj FROM Topico obj WHERE obj.id.marcadorpai LIKE ?</query>
      </named-query>
- 
+     
+	<named-query name="selectCollaborators">
+          <query>SELECT obj FROM Colaborador obj WHERE obj.id.tipodecolaborador LIKE ? AND obj.id.id != 18</query>
+    </named-query>
+     
+    <named-query name="selectCollaboratorsOthers">
+          <query>SELECT obj FROM Colaborador obj WHERE obj.id.tipodecolaborador IS NULL OR obj.id.tipodecolaborador LIKE ?</query>
+    </named-query>
+    
+    <named-query name="selectCollaboratorsCoordinators">
+          <query>SELECT obj FROM Colaborador obj WHERE obj.id.id = 18</query>
+    </named-query> 
 </entity-mappings>

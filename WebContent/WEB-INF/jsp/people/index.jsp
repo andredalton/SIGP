@@ -24,10 +24,37 @@
 		</c:choose>
     
 		<div id="contents">
-			<c:forEach items="${people}" var="person">
+			
+			<h2>Coordinators</h2>
+			
+			<c:forEach items="${coordinators}" var="person">
 				<ul>
 					<li>
-						<a href="<c:url value='/people/'></c:url>{$person.id}">
+						<a href="<c:url value='/people/'></c:url>${person.id}">
+							${person.nomecompleto}
+						</a>
+					</li>
+				</ul>
+			</c:forEach>
+		
+			<h2>PhD Students</h2>
+			
+			<c:forEach items="${phds}" var="person">
+				<ul>
+					<li>
+						<a href="<c:url value='/people/'></c:url>${person.id}">
+							${person.nomecompleto}
+						</a>
+					</li>
+				</ul>
+			</c:forEach>
+			
+			<h2>Researchers</h2>
+			
+			<c:forEach items="${researchers}" var="person">
+				<ul>
+					<li>
+						<a href="<c:url value='/people/'></c:url>${person.id}">
 							${person.nomecompleto}
 						</a>
 					</li>
@@ -35,25 +62,55 @@
 			</c:forEach>
 		
 		
-			<h2 class="top"><fmt:message key="header.contribuintes" /></h2>
-
-			<ul class="membro">
-				<c:forEach items="${contribuintes}" var="contrib">
+			<h2>Master Degree Students</h2>
+			
+			<c:forEach items="${masters}" var="person">
+				<ul>
 					<li>
-						<div class="left">
-							<a href="/SIGP/contribuinte/ver/${contrib.idContribuinte}">
-								<img class="membro" src="<c:url value="/contribuinte/foto/${contrib.idContribuinte}"></c:url>" />
-							</a>
-						</div>
-						<div>
-							<a href="/SIGP/contribuinte/ver/${contrib.idContribuinte}">${contrib.nome}</a>
-							<br />
-							(${contrib.nomeCitacao})
-						</div>
-						<span class="clear"></span>
+						<a href="<c:url value='/people/'></c:url>${person.id}">
+							${person.nomecompleto}
+						</a>
 					</li>
-				</c:forEach>
-			</ul>
+				</ul>
+			</c:forEach>
+		
+			<h2>Undergrad Students</h2>
+			
+			<c:forEach items="${undergraduates}" var="person">
+				<ul>
+					<li>
+						<a href="<c:url value='/people/'></c:url>${person.id}">
+							${person.nomecompleto}
+						</a>
+					</li>
+				</ul>
+			</c:forEach>
+			
+			
+			<h2>Collaborators</h2>
+			
+			<c:forEach items="${collaborators}" var="person">
+				<ul>
+					<li>
+						<a href="<c:url value='/people/'></c:url>${person.id}">
+							${person.nomecompleto}
+						</a>
+					</li>
+				</ul>
+			</c:forEach>
+			
+			<h2>Others</h2>
+			
+			<c:forEach items="${others}" var="person">
+				<ul>
+					<li>
+						<a href="<c:url value='/people/'></c:url>${person.id}">
+							${person.nomecompleto}
+						</a>
+					</li>
+				</ul>
+			</c:forEach>
+			
 		</div> <!-- id=contents -->
 	</div>
 </div>  

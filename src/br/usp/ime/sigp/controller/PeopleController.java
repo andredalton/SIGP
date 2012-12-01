@@ -22,8 +22,26 @@ public class PeopleController {
 
     @Path({"/people/", "/people"})
     public void index() {
-        List<BaseEntityString> people = dao.selectByNamedQuery("selectPeople");
-        result.include("people", people);
+    	List<BaseEntityString> researchers = dao.selectByNamedQuery("selectCollaborators", "Pesquisador%");
+        result.include("researchers", researchers);
+        
+        List<BaseEntityString> phds = dao.selectByNamedQuery("selectCollaborators", "Doutorand%");
+        result.include("phds", phds);
+
+        List<BaseEntityString> masters = dao.selectByNamedQuery("selectCollaborators", "Mestrand%");
+        result.include("masters", masters);
+
+        List<BaseEntityString> undergraduates = dao.selectByNamedQuery("selectCollaborators", "Graduand%");
+        result.include("undergraduates", undergraduates);
+        
+        List<BaseEntityString> others = dao.selectByNamedQuery("selectCollaboratorsOthers", "Egress%");
+        result.include("others", others);
+
+        List<BaseEntityString> coordinators = dao.selectByNamedQuery("selectCollaboratorsCoordinators");
+        result.include("coordinators", coordinators);
+        
+        List<BaseEntityString> collaborators = dao.selectByNamedQuery("selectCollaborators", "Colaborador%");
+        result.include("collaborators", collaborators);
     }
     
     @Path("/people/{person.id}")
