@@ -8,19 +8,19 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.usp.ime.sigp.dao.GenericDAOString;
 import br.usp.ime.sigp.jpa.BaseEntityString;
-import br.usp.ime.sigp.modelo.Marcador;
+import br.usp.ime.sigp.modelo.Tag;
 
 @Resource
-public class ProjetosController {
+public class PublicationsController {
     private final GenericDAOString dao;
     private final Result result;
 
-    public ProjetosController(GenericDAOString dao, Result result) {
+    public PublicationsController(GenericDAOString dao, Result result) {
          this.result   = result;
          this.dao      = dao;
     }
 
-    @Path({"/projetos/", "/projetos"})
+    @Path({"/publications/", "/publications"})
     public void index() {
     }
 }

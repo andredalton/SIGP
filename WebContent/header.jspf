@@ -126,12 +126,12 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="<c:url value='/projetos/'></c:url>" <c:if test="${headername == 'projeto'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/projects/'></c:url>" <c:if test="${headername == 'projeto'}">class="active-nav"</c:if>>
                     	Projects
                     </a>
                 </li>
                 <li>
-                    <a href="<c:url value='/publicacoes/'></c:url>" <c:if test="${headername == 'publicacao'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/publications/'></c:url>" <c:if test="${headername == 'publicacao'}">class="active-nav"</c:if>>
                     	Publications
                     </a>
                 </li>
@@ -146,14 +146,6 @@
                     </a>
                 </li>
                 
-                <!--
-                <li>
-                    <a href="<c:url value='/pessoas/'></c:url>" <c:if test="${headername == 'pessoas'}">class="active-nav"</c:if>>
-                    	People
-                    </a>
-                </li>
-                 -->
-                 
                 <li>
                     <a href="<c:url value='/adm/'></c:url>" <c:if test="${headername == 'adm'}">class="active-nav"</c:if>>
                     	Administration

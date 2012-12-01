@@ -13,7 +13,7 @@
 		<div id="container">
 			<div id="article">
 				<div id="aside" class="one-sixth">
-					<%@ include file="/WEB-INF/jsp/publicacoes/filtros.jsp" %>
+					<%@ include file="/WEB-INF/jsp/publications/filtros.jsp" %>
 				</div>
 				<div style="display: inline-block; width: 450px">
 					<h2>Full List</h2>
