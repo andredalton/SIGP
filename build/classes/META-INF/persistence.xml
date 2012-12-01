@@ -30,10 +30,10 @@
 		
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost/sigp2012v001" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://ken/sigp" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.connection.username" value="root" />
-			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.username" value="sigp" />
+			<property name="hibernate.connection.password" value="sigp" />
 		</properties>
 	</persistence-unit>
 </persistence>

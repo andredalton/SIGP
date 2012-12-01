@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Controle de Pedidos</title>
+	<title>SIGP</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Language" content="en-GB" />
     <meta name="author" content="Marco Aurélio Gerosa" />
@@ -152,7 +152,37 @@
                     <ul>
                         <li>
                         	<a href="<c:url value='/marcador/lista'></c:url>">
-                            	Lista de Marcadores
+                            	Marcadores
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="<c:url value='/marcador/lista'></c:url>">
+                            	Linhas de Pesquisa
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="<c:url value='/marcador/lista'></c:url>">
+                            	Dados do Grupo de Pesquisa
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="<c:url value='/marcador/lista'></c:url>">
+                            	Projetos de Pesquisa
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="<c:url value='/marcador/lista'></c:url>">
+                            	Colaboradores
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="<c:url value='/marcador/lista'></c:url>">
+                            	Grupos de Pesquisa Associados
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="<c:url value='/marcador/lista'></c:url>">
+                            	Notícias
                             </a>
                         </li>
                     </ul>
