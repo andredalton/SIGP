@@ -8,7 +8,7 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.usp.ime.sigp.dao.GenericDAOString;
 import br.usp.ime.sigp.jpa.BaseEntityString;
-import br.usp.ime.sigp.modelo.Tag;
+import br.usp.ime.sigp.modelo.Marcador;
 
 @Resource
 public class TagsController {
@@ -19,11 +19,11 @@ public class TagsController {
          this.result   = result;
          this.dao      = dao;
     }
-    
-    @Path({"/tags/", "/tags"})
+
+    @Path("/tags")
     public void list() {
-         List<BaseEntityString> tags = dao.selectByNamedQuery("selectTags");
-         result.include("tags", tags);
+         List<BaseEntityString> marcadors = dao.selectByNamedQuery("selectMarcadors");
+         result.include("marcadors", marcadors);
     }
 
     @Path("/tag/form")
@@ -31,41 +31,41 @@ public class TagsController {
 
     }
 
-    @Path("/tag/edit/{tag.id}")
-    public void edit(Tag tag) {
-         tag = (Tag) dao.selectById(tag);
-         if(tag != null) {
-              result.include("tag", tag);
+    @Path("/tag/edit/{marcador.id}")
+    public void edit(Marcador marcador) {
+         marcador = (Marcador) dao.selectById(marcador);
+         if(marcador != null) {
+              result.include("marcador", marcador);
          }
          result.redirectTo(this.getClass()).form();
     }
 
     @Post
     @Path("/tag/save")
-    public void salve(Tag tag) {
-         if(tag != null) {
-              if(tag.getId() == null) {
-                   dao.insert(tag);
+    public void save(Marcador marcador) {
+         if(marcador != null) {
+              if(marcador.getId() == null) {
+                   dao.insert(marcador);
               } else {
-                   dao.update(tag);
+                   dao.update(marcador);
               }
          }
          list();
          result.redirectTo(this.getClass()).list();
     }
 
-    @Path("/tag/delete/{tag.id}")
-    public void delete(Tag tag) {
-         if(tag != null && tag.getId() != null) {
-              dao.remove(tag);
+    @Path("/tag/delete/{marcador.id}")
+    public void delete(Marcador marcador) {
+         if(marcador != null && marcador.getId() != null) {
+              dao.remove(marcador);
          }
          list();
          result.redirectTo(this.getClass()).list();
     }
 
-    @Path("/tag/edittopic/{tag.id}")
-    public void edittopic(Tag tag) {
-         result.redirectTo(TopicosController.class).lista(tag.getId());
+    @Path("/tag/edittopic/{marcador.id}")
+    public void edittopic(Marcador marcador) {
+         result.redirectTo(TopicsController.class).list(marcador.getId());
     }
 
 }

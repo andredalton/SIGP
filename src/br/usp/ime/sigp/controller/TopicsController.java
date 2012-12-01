@@ -11,36 +11,36 @@ import br.usp.ime.sigp.modelo.Topico;
 import br.usp.ime.sigp.modelo.TopicoPk;
 
 @Resource
-public class TopicosController {
+public class TopicsController {
 	private final GenericDAOTopicoPk dao;
 	private final Result result;
 
-	public TopicosController(GenericDAOTopicoPk dao, Result result) {
+	public TopicsController(GenericDAOTopicoPk dao, Result result) {
 		this.result = result;
 		this.dao = dao;
 	}
 
-	@Path("/topico/lista")
-	public void lista() {
+	@Path("/topics")
+	public void list() {
 		List<Topico> topicos = dao
 				.selectByNamedQuery("selectTopicos");
 		result.include("topicos", topicos);
 	}
 
-	@Path("/topico/lista/{marcador.id}")
-	public void lista(String marcadorpai) {
+	@Path("/topic/list/{marcador.id}")
+	public void list(String marcadorpai) {
 		List<Topico> topicos = dao
 				.selectByNamedQuery("selectTopicosdomarcadorpai", marcadorpai);
 		result.include("topicos", topicos);
 	}
 	
-	@Path("/topico/formulario")
-	public void formulario() {
+	@Path("/topic/form")
+	public void form() {
 
 	}
 
-	@Path("/topico/editar/{nome}/{marcadorpai}")
-	public void editar(String nome, String marcadorpai) {
+	@Path("/topic/edit/{nome}/{marcadorpai}")
+	public void edit(String nome, String marcadorpai) {
 		TopicoPk topicopk = new TopicoPk();
 		topicopk.setNome(nome);
 		topicopk.setMarcadorpai(marcadorpai);
@@ -50,12 +50,12 @@ public class TopicosController {
 		if (topico != null) {
 			result.include("topico", topico);
 		}
-		result.redirectTo(this.getClass()).formulario();
+		result.redirectTo(this.getClass()).form();
 	}
 
 	@Post
-	@Path("/topico/salvar")
-	public void salvar(Topico topico) {
+	@Path("/topic/save")
+	public void save(Topico topico) {
 		if (topico != null) {
 			if (topico.getId() == null) {
 				dao.insert(topico);
@@ -63,12 +63,12 @@ public class TopicosController {
 				dao.update(topico);
 			}
 		}
-		lista();
-		result.redirectTo(this.getClass()).lista();
+		list();
+		result.redirectTo(this.getClass()).list();
 	}
 
-	@Path("/topico/excluir/{nome}/{marcadorpai}")
-	public void excluir(String nome, String marcadorpai) {
+	@Path("/topic/delete/{nome}/{marcadorpai}")
+	public void delete(String nome, String marcadorpai) {
 		TopicoPk topicopk = new TopicoPk();
 		topicopk.setNome(nome);
 		topicopk.setMarcadorpai(marcadorpai);
@@ -78,7 +78,7 @@ public class TopicosController {
 		if (topico != null && topico.getId() != null) {
 			dao.remove(topico);
 		}
-		lista();
-		result.redirectTo(this.getClass()).lista();
+		list();
+		result.redirectTo(this.getClass()).list();
 	}
 }
