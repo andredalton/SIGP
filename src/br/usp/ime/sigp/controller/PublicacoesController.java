@@ -20,7 +20,9 @@ public class PublicacoesController {
          this.dao      = dao;
     }
 
-    @Path({"/publicacoes/", "/publicacoes"})
+    @Path({"/publicacao/", "/publicacao"})
     public void index() {
+    	List<BaseEntityString> publicacao = dao.selectByNamedQuery("selectPublicacao");
+        result.include("publicacao", publicacao);
     }
 }
