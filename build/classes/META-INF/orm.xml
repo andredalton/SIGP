@@ -7,6 +7,10 @@
      <named-query name="selectMarcadors">
           <query>SELECT obj FROM Marcador obj</query>
      </named-query>
+     
+     <named-query name="selectPeople">
+          <query>SELECT obj FROM Colaborador obj</query>
+     </named-query>
 
      <named-query name="selectTopicos">
           <query>SELECT obj FROM Topico obj</query>

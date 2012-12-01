@@ -22,5 +22,7 @@ public class PeopleController {
 
     @Path({"/people/", "/people"})
     public void index() {
+        List<BaseEntityString> peoples = dao.selectByNamedQuery("selectPeople");
+        result.include("peoples", peoples);
     }
 }
