@@ -30,5 +30,6 @@
     
     <named-query name="selectCollaboratorsCoordinators">
           <query>SELECT obj FROM Colaborador obj WHERE obj.id.id = 18</query>
-    </named-query> 
+    </named-query>
+    
 </entity-mappings>

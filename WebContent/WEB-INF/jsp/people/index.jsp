@@ -24,8 +24,7 @@
 		</c:choose>
     
 		<div id="contents">
-			
-			<h2>Coordinators</h2>
+			<h3>Coordinators</h3>
 			
 			<c:forEach items="${coordinators}" var="person">
 				<ul>
@@ -37,7 +36,9 @@
 				</ul>
 			</c:forEach>
 		
-			<h2>PhD Students</h2>
+			<div class="separator"></div>
+		
+			<h3>PhD Students</h3>
 			
 			<c:forEach items="${phds}" var="person">
 				<ul>
@@ -49,7 +50,9 @@
 				</ul>
 			</c:forEach>
 			
-			<h2>Researchers</h2>
+			<div class="separator"></div>
+			
+			<h3>Researchers</h3>
 			
 			<c:forEach items="${researchers}" var="person">
 				<ul>
@@ -61,8 +64,9 @@
 				</ul>
 			</c:forEach>
 		
+			<div class="separator"></div>
 		
-			<h2>Master Degree Students</h2>
+			<h3>Master Degree Students</h3>
 			
 			<c:forEach items="${masters}" var="person">
 				<ul>
@@ -74,7 +78,9 @@
 				</ul>
 			</c:forEach>
 		
-			<h2>Undergrad Students</h2>
+			<div class="separator"></div>
+			
+			<h3>Undergrad Students</h3>
 			
 			<c:forEach items="${undergraduates}" var="person">
 				<ul>
@@ -86,8 +92,9 @@
 				</ul>
 			</c:forEach>
 			
+			<div class="separator"></div>
 			
-			<h2>Collaborators</h2>
+			<h3>Collaborators</h3>
 			
 			<c:forEach items="${collaborators}" var="person">
 				<ul>
@@ -99,7 +106,9 @@
 				</ul>
 			</c:forEach>
 			
-			<h2>Others</h2>
+			<div class="separator"></div>
+			
+			<h3>Others</h2>
 			
 			<c:forEach items="${others}" var="person">
 				<ul>

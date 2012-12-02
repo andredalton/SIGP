@@ -1,13 +1,3 @@
-<!----------- TITLE ---------->
-<div id="page-headline">
-	<div id="page-headline-inner">  
-		<div id="page-title">
-			<h2>People</h2>
-		</div><!-- end page-title -->           
-	</div><!-- end page-headline-inner -->
-	<div class="separator"></div>   
-</div><!-- end page-headline -->
-
 <div id="wrapper">
 	<div id="content" class="cont-left">
 		<c:choose>
@@ -23,9 +13,40 @@
 			</c:otherwise>
 		</c:choose>
     
-		<div id="contents">
-		
-			${person}
-		</div> <!-- id=contents -->
+    	<div id="page-headline">
+			<div id="page-headline-inner">
+				<div id="page-title">
+					<h2>${person.nomecompleto}</h2>
+					<p>${person.tipodecolaborador}</p>
+				</div>
+			</div>
+		</div>
+		<div class="fotoCurriculo">
+			<img src="<c:url value='/images/colaborator.jpg'/>" class="colaboradorFoto" title="${person.apelido}" alt="${person.apelido}" />
+		</div>
+		<div id="curriculo">
+			<p>
+				<span id="_t15">${person.shortbioportugues}</span>
+			</p>
+			<p>
+				<strong>e-mail</strong>
+				: ${person.email}
+			</p>
+			<p>
+				<strong>CV</strong>
+				: <a class="colaborador" href="${person.cvurl}">${person.cvurl}</a>
+			</p>
+			
+			<div style="display: inline-block;">
+				<h2>Publications</h2>
+			</div>
+			
+		</div>
 	</div>
+	
+	
+	
+	
 </div>  
+
+
