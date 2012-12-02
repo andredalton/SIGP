@@ -21,11 +21,15 @@
   </filter-mapping>
   <jsp-config>
     <jsp-property-group>
-      <description>ControleDePedidosTakai</description>
-      <display-name>Controle de Pedidos</display-name>
+      <description>SIGP</description>
+      <display-name>SIGP</display-name>
       <url-pattern>*.jsp</url-pattern>
       <include-prelude>/header.jspf</include-prelude>
       <include-coda>/footer.jspf</include-coda>
     </jsp-property-group>
   </jsp-config>
+  <context-param>  
+	<param-name>br.com.caelum.vraptor.packages</param-name>  
+	<param-value>br.com.caelum.vraptor.util.jpa</param-value>  
+  </context-param> 
 </web-app>
