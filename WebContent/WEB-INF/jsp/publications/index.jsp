@@ -8,26 +8,19 @@
 	<div class="separator"></div>   
 </div><!-- end page-headline -->
 
+
 <div id="wrapper">
 	<div id="content" class="cont-left">
-		<div id="container">
-			<div id="article">
-				<div id="aside" class="one-sixth">
-					<%@ include file="/WEB-INF/jsp/publications/filtros.jsp" %>
-				</div>
-				<div style="display: inline-block; width: 450px">
-					<h2>Full List</h2>
-					<ol class="custom-list">
-						<c:forEach items="${publicacoes}" var="publicacao">
-							<li>
-								<strong>"<a href="<c:url value="/publicacao/ver/${publicacao.idPublicacao}"></c:url>">${publicacao.titulo}</a>"</strong>
-					        </li>
-					    </c:forEach>
-					</ol>
-				</div> <!-- end inline-block -->
-			</div> <!-- end Article -->
-			<div class="breakLine"></div>
-			<div class="sectionLine"></div>
-		</div> <!-- Container -->
+		<div id="contents">
+			<ol>
+				<c:forEach items="${publications}" var="publication">
+					<li>
+						<a href="<c:url value='/publication/'></c:url>${publication.id}">
+							${publication.titulo}
+						</a>
+					</li>
+				</c:forEach>
+			</ol>
+		</div>
 	</div>
 </div>
