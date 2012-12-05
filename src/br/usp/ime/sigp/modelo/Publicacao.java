@@ -2,16 +2,14 @@ package br.usp.ime.sigp.modelo;
 
 import java.io.Serializable;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="publicacao")
-public class Publicacao implements Serializable
-{
+@Table(name = "publicacao")
+public class Publicacao implements Serializable {
 	protected long id;
 
 	protected String estado;
@@ -58,7 +56,7 @@ public class Publicacao implements Serializable
 
 	protected String complemento;
 
-	protected String webqualis;
+	protected Qualis webqualis;
 
 	protected String meio;
 
@@ -72,8 +70,7 @@ public class Publicacao implements Serializable
 	 * Method 'Publicacao'
 	 * 
 	 */
-	public Publicacao()
-	{
+	public Publicacao() {
 	}
 
 	/**
@@ -82,9 +79,8 @@ public class Publicacao implements Serializable
 	 * @return long
 	 */
 	@Id
-	@Column(name="id")
-	public long getId()
-	{
+	@Column(name = "id")
+	public long getId() {
 		return id;
 	}
 
@@ -93,8 +89,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param id
 	 */
-	public void setId(long id)
-	{
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -103,9 +98,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="estado")
-	public String getEstado()
-	{
+	@Column(name = "estado")
+	public String getEstado() {
 		return estado;
 	}
 
@@ -114,8 +108,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param estado
 	 */
-	public void setEstado(String estado)
-	{
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 
@@ -124,9 +117,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="doi")
-	public String getDoi()
-	{
+	@Column(name = "doi")
+	public String getDoi() {
 		return doi;
 	}
 
@@ -135,8 +127,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param doi
 	 */
-	public void setDoi(String doi)
-	{
+	public void setDoi(String doi) {
 		this.doi = doi;
 	}
 
@@ -145,9 +136,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="tipo")
-	public String getTipo()
-	{
+	@Column(name = "tipo")
+	public String getTipo() {
 		return tipo;
 	}
 
@@ -156,8 +146,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param tipo
 	 */
-	public void setTipo(String tipo)
-	{
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
@@ -166,9 +155,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="titulo")
-	public String getTitulo()
-	{
+	@Column(name = "titulo")
+	public String getTitulo() {
 		return titulo;
 	}
 
@@ -177,8 +165,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param titulo
 	 */
-	public void setTitulo(String titulo)
-	{
+	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
@@ -187,9 +174,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="ano")
-	public String getAno()
-	{
+	@Column(name = "ano")
+	public String getAno() {
 		return ano;
 	}
 
@@ -198,8 +184,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param ano
 	 */
-	public void setAno(String ano)
-	{
+	public void setAno(String ano) {
 		this.ano = ano;
 	}
 
@@ -208,9 +193,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="idioma")
-	public String getIdioma()
-	{
+	@Column(name = "idioma")
+	public String getIdioma() {
 		return idioma;
 	}
 
@@ -219,8 +203,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param idioma
 	 */
-	public void setIdioma(String idioma)
-	{
+	public void setIdioma(String idioma) {
 		this.idioma = idioma;
 	}
 
@@ -229,9 +212,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="titulodaconferenciajornallivrorevista")
-	public String getTitulodaconferenciajornallivrorevista()
-	{
+	@Column(name = "titulodaconferenciajornallivrorevista")
+	public String getTitulodaconferenciajornallivrorevista() {
 		return titulodaconferenciajornallivrorevista;
 	}
 
@@ -240,8 +222,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param titulodaconferenciajornallivrorevista
 	 */
-	public void setTitulodaconferenciajornallivrorevista(String titulodaconferenciajornallivrorevista)
-	{
+	public void setTitulodaconferenciajornallivrorevista(
+			String titulodaconferenciajornallivrorevista) {
 		this.titulodaconferenciajornallivrorevista = titulodaconferenciajornallivrorevista;
 	}
 
@@ -250,9 +232,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="editora")
-	public String getEditora()
-	{
+	@Column(name = "editora")
+	public String getEditora() {
 		return editora;
 	}
 
@@ -261,8 +242,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param editora
 	 */
-	public void setEditora(String editora)
-	{
+	public void setEditora(String editora) {
 		this.editora = editora;
 	}
 
@@ -271,9 +251,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="cidade")
-	public String getCidade()
-	{
+	@Column(name = "cidade")
+	public String getCidade() {
 		return cidade;
 	}
 
@@ -282,8 +261,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param cidade
 	 */
-	public void setCidade(String cidade)
-	{
+	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
 
@@ -292,9 +270,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="pais")
-	public String getPais()
-	{
+	@Column(name = "pais")
+	public String getPais() {
 		return pais;
 	}
 
@@ -303,8 +280,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param pais
 	 */
-	public void setPais(String pais)
-	{
+	public void setPais(String pais) {
 		this.pais = pais;
 	}
 
@@ -313,9 +289,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="volume")
-	public String getVolume()
-	{
+	@Column(name = "volume")
+	public String getVolume() {
 		return volume;
 	}
 
@@ -324,8 +299,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param volume
 	 */
-	public void setVolume(String volume)
-	{
+	public void setVolume(String volume) {
 		this.volume = volume;
 	}
 
@@ -334,9 +308,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="serie")
-	public String getSerie()
-	{
+	@Column(name = "serie")
+	public String getSerie() {
 		return serie;
 	}
 
@@ -345,8 +318,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param serie
 	 */
-	public void setSerie(String serie)
-	{
+	public void setSerie(String serie) {
 		this.serie = serie;
 	}
 
@@ -355,9 +327,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="paginainicial")
-	public String getPaginainicial()
-	{
+	@Column(name = "paginainicial")
+	public String getPaginainicial() {
 		return paginainicial;
 	}
 
@@ -366,8 +337,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param paginainicial
 	 */
-	public void setPaginainicial(String paginainicial)
-	{
+	public void setPaginainicial(String paginainicial) {
 		this.paginainicial = paginainicial;
 	}
 
@@ -376,9 +346,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="paginafinal")
-	public String getPaginafinal()
-	{
+	@Column(name = "paginafinal")
+	public String getPaginafinal() {
 		return paginafinal;
 	}
 
@@ -387,8 +356,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param paginafinal
 	 */
-	public void setPaginafinal(String paginafinal)
-	{
+	public void setPaginafinal(String paginafinal) {
 		this.paginafinal = paginafinal;
 	}
 
@@ -397,9 +365,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="fasciculoSpecialIssue")
-	public String getFasciculoSpecialIssue()
-	{
+	@Column(name = "fasciculoSpecialIssue")
+	public String getFasciculoSpecialIssue() {
 		return fasciculoSpecialIssue;
 	}
 
@@ -408,8 +375,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param fasciculoSpecialIssue
 	 */
-	public void setFasciculoSpecialIssue(String fasciculoSpecialIssue)
-	{
+	public void setFasciculoSpecialIssue(String fasciculoSpecialIssue) {
 		this.fasciculoSpecialIssue = fasciculoSpecialIssue;
 	}
 
@@ -418,9 +384,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="isbn")
-	public String getIsbn()
-	{
+	@Column(name = "isbn")
+	public String getIsbn() {
 		return isbn;
 	}
 
@@ -429,8 +394,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param isbn
 	 */
-	public void setIsbn(String isbn)
-	{
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 
@@ -439,9 +403,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="issn")
-	public String getIssn()
-	{
+	@Column(name = "issn")
+	public String getIssn() {
 		return issn;
 	}
 
@@ -450,8 +413,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param issn
 	 */
-	public void setIssn(String issn)
-	{
+	public void setIssn(String issn) {
 		this.issn = issn;
 	}
 
@@ -460,9 +422,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="abrangencia")
-	public String getAbrangencia()
-	{
+	@Column(name = "abrangencia")
+	public String getAbrangencia() {
 		return abrangencia;
 	}
 
@@ -471,8 +432,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param abrangencia
 	 */
-	public void setAbrangencia(String abrangencia)
-	{
+	public void setAbrangencia(String abrangencia) {
 		this.abrangencia = abrangencia;
 	}
 
@@ -481,9 +441,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="resumolinguaoriginal")
-	public String getResumolinguaoriginal()
-	{
+	@Column(name = "resumolinguaoriginal")
+	public String getResumolinguaoriginal() {
 		return resumolinguaoriginal;
 	}
 
@@ -492,8 +451,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param resumolinguaoriginal
 	 */
-	public void setResumolinguaoriginal(String resumolinguaoriginal)
-	{
+	public void setResumolinguaoriginal(String resumolinguaoriginal) {
 		this.resumolinguaoriginal = resumolinguaoriginal;
 	}
 
@@ -502,9 +460,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="resumo")
-	public String getResumo()
-	{
+	@Column(name = "resumo")
+	public String getResumo() {
 		return resumo;
 	}
 
@@ -513,8 +470,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param resumo
 	 */
-	public void setResumo(String resumo)
-	{
+	public void setResumo(String resumo) {
 		this.resumo = resumo;
 	}
 
@@ -523,9 +479,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="bibtex")
-	public String getBibtex()
-	{
+	@Column(name = "bibtex")
+	public String getBibtex() {
 		return bibtex;
 	}
 
@@ -534,8 +489,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param bibtex
 	 */
-	public void setBibtex(String bibtex)
-	{
+	public void setBibtex(String bibtex) {
 		this.bibtex = bibtex;
 	}
 
@@ -544,9 +498,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="complemento")
-	public String getComplemento()
-	{
+	@Column(name = "complemento")
+	public String getComplemento() {
 		return complemento;
 	}
 
@@ -555,19 +508,17 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param complemento
 	 */
-	public void setComplemento(String complemento)
-	{
+	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
 
 	/**
 	 * Method 'getWebqualis'
 	 * 
-	 * @return String
+	 * @return Qualis
 	 */
-	@Column(name="webqualis")
-	public String getWebqualis()
-	{
+	@Column(name = "webqualis")
+	public Qualis getWebqualis() {
 		return webqualis;
 	}
 
@@ -576,8 +527,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param webqualis
 	 */
-	public void setWebqualis(String webqualis)
-	{
+	public void setWebqualis(Qualis webqualis) {
 		this.webqualis = webqualis;
 	}
 
@@ -586,9 +536,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="meio")
-	public String getMeio()
-	{
+	@Column(name = "meio")
+	public String getMeio() {
 		return meio;
 	}
 
@@ -597,8 +546,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param meio
 	 */
-	public void setMeio(String meio)
-	{
+	public void setMeio(String meio) {
 		this.meio = meio;
 	}
 
@@ -607,9 +555,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="data")
-	public String getData()
-	{
+	@Column(name = "data")
+	public String getData() {
 		return data;
 	}
 
@@ -618,8 +565,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param data
 	 */
-	public void setData(String data)
-	{
+	public void setData(String data) {
 		this.data = data;
 	}
 
@@ -628,9 +574,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="citacaourl")
-	public String getCitacaourl()
-	{
+	@Column(name = "citacaourl")
+	public String getCitacaourl() {
 		return citacaourl;
 	}
 
@@ -639,8 +584,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param citacaourl
 	 */
-	public void setCitacaourl(String citacaourl)
-	{
+	public void setCitacaourl(String citacaourl) {
 		this.citacaourl = citacaourl;
 	}
 
@@ -649,9 +593,8 @@ public class Publicacao implements Serializable
 	 * 
 	 * @return long
 	 */
-	@Column(name="citacoes")
-	public long getCitacoes()
-	{
+	@Column(name = "citacoes")
+	public long getCitacoes() {
 		return citacoes;
 	}
 
@@ -660,8 +603,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param citacoes
 	 */
-	public void setCitacoes(Long citacoes)
-	{
+	public void setCitacoes(Long citacoes) {
 		this.citacoes = citacoes;
 	}
 

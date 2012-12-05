@@ -8,9 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="colaborador")
-public class Colaborador implements Serializable
-{
+@Table(name = "colaborador")
+public class Colaborador implements Serializable {
 	protected long id;
 
 	protected byte[] imagem;
@@ -19,7 +18,7 @@ public class Colaborador implements Serializable
 
 	protected String apelido;
 
-	protected String tipodecolaborador;
+	protected TipoColaborador tipodecolaborador;
 
 	protected String nomeemcitacoes;
 
@@ -40,13 +39,12 @@ public class Colaborador implements Serializable
 	protected String outrasinformacoesprivado;
 
 	protected long coordenador;
-	
+
 	/**
 	 * Method 'Colaborador'
 	 * 
 	 */
-	public Colaborador()
-	{
+	public Colaborador() {
 	}
 
 	/**
@@ -55,9 +53,8 @@ public class Colaborador implements Serializable
 	 * @return long
 	 */
 	@Id
-	@Column(name="id")
-	public long getId()
-	{
+	@Column(name = "id")
+	public long getId() {
 		return id;
 	}
 
@@ -66,8 +63,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param id
 	 */
-	public void setId(long id)
-	{
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -76,9 +72,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return byte[]
 	 */
-	@Column(name="imagem")
-	public byte[] getImagem()
-	{
+	@Column(name = "imagem")
+	public byte[] getImagem() {
 		return imagem;
 	}
 
@@ -87,8 +82,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param imagem
 	 */
-	public void setImagem(byte[] imagem)
-	{
+	public void setImagem(byte[] imagem) {
 		this.imagem = imagem;
 	}
 
@@ -97,9 +91,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="nomecompleto")
-	public String getNomecompleto()
-	{
+	@Column(name = "nomecompleto")
+	public String getNomecompleto() {
 		return nomecompleto;
 	}
 
@@ -108,8 +101,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param nomecompleto
 	 */
-	public void setNomecompleto(String nomecompleto)
-	{
+	public void setNomecompleto(String nomecompleto) {
 		this.nomecompleto = nomecompleto;
 	}
 
@@ -118,9 +110,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="apelido")
-	public String getApelido()
-	{
+	@Column(name = "apelido")
+	public String getApelido() {
 		return apelido;
 	}
 
@@ -129,8 +120,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param apelido
 	 */
-	public void setApelido(String apelido)
-	{
+	public void setApelido(String apelido) {
 		this.apelido = apelido;
 	}
 
@@ -139,9 +129,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="tipodecolaborador")
-	public String getTipodecolaborador()
-	{
+	@Column(name = "tipodecolaborador")
+	public TipoColaborador getTipodecolaborador() {
 		return tipodecolaborador;
 	}
 
@@ -150,8 +139,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param tipodecolaborador
 	 */
-	public void setTipodecolaborador(String tipodecolaborador)
-	{
+	public void setTipodecolaborador(TipoColaborador tipodecolaborador) {
 		this.tipodecolaborador = tipodecolaborador;
 	}
 
@@ -160,9 +148,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="nomeemcitacoes")
-	public String getNomeemcitacoes()
-	{
+	@Column(name = "nomeemcitacoes")
+	public String getNomeemcitacoes() {
 		return nomeemcitacoes;
 	}
 
@@ -171,8 +158,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param nomeemcitacoes
 	 */
-	public void setNomeemcitacoes(String nomeemcitacoes)
-	{
+	public void setNomeemcitacoes(String nomeemcitacoes) {
 		this.nomeemcitacoes = nomeemcitacoes;
 	}
 
@@ -181,9 +167,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="email")
-	public String getEmail()
-	{
+	@Column(name = "email")
+	public String getEmail() {
 		return email;
 	}
 
@@ -192,8 +177,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param email
 	 */
-	public void setEmail(String email)
-	{
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
@@ -202,9 +186,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="cvurl")
-	public String getCvurl()
-	{
+	@Column(name = "cvurl")
+	public String getCvurl() {
 		return cvurl;
 	}
 
@@ -213,8 +196,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param cvurl
 	 */
-	public void setCvurl(String cvurl)
-	{
+	public void setCvurl(String cvurl) {
 		this.cvurl = cvurl;
 	}
 
@@ -223,9 +205,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="rg")
-	public String getRg()
-	{
+	@Column(name = "rg")
+	public String getRg() {
 		return rg;
 	}
 
@@ -234,8 +215,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param rg
 	 */
-	public void setRg(String rg)
-	{
+	public void setRg(String rg) {
 		this.rg = rg;
 	}
 
@@ -244,9 +224,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="cpf")
-	public String getCpf()
-	{
+	@Column(name = "cpf")
+	public String getCpf() {
 		return cpf;
 	}
 
@@ -255,8 +234,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param cpf
 	 */
-	public void setCpf(String cpf)
-	{
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
@@ -265,9 +243,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="shortbioportugues")
-	public String getShortbioportugues()
-	{
+	@Column(name = "shortbioportugues")
+	public String getShortbioportugues() {
 		return shortbioportugues;
 	}
 
@@ -276,8 +253,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param shortbioportugues
 	 */
-	public void setShortbioportugues(String shortbioportugues)
-	{
+	public void setShortbioportugues(String shortbioportugues) {
 		this.shortbioportugues = shortbioportugues;
 	}
 
@@ -286,9 +262,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="outrasinformacoespublico")
-	public String getOutrasinformacoespublico()
-	{
+	@Column(name = "outrasinformacoespublico")
+	public String getOutrasinformacoespublico() {
 		return outrasinformacoespublico;
 	}
 
@@ -297,8 +272,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param outrasinformacoespublico
 	 */
-	public void setOutrasinformacoespublico(String outrasinformacoespublico)
-	{
+	public void setOutrasinformacoespublico(String outrasinformacoespublico) {
 		this.outrasinformacoespublico = outrasinformacoespublico;
 	}
 
@@ -307,9 +281,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="shortbioenglish")
-	public String getShortbioenglish()
-	{
+	@Column(name = "shortbioenglish")
+	public String getShortbioenglish() {
 		return shortbioenglish;
 	}
 
@@ -318,8 +291,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param shortbioenglish
 	 */
-	public void setShortbioenglish(String shortbioenglish)
-	{
+	public void setShortbioenglish(String shortbioenglish) {
 		this.shortbioenglish = shortbioenglish;
 	}
 
@@ -328,9 +300,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="outrasinformacoesprivado")
-	public String getOutrasinformacoesprivado()
-	{
+	@Column(name = "outrasinformacoesprivado")
+	public String getOutrasinformacoesprivado() {
 		return outrasinformacoesprivado;
 	}
 
@@ -339,8 +310,7 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param outrasinformacoesprivado
 	 */
-	public void setOutrasinformacoesprivado(String outrasinformacoesprivado)
-	{
+	public void setOutrasinformacoesprivado(String outrasinformacoesprivado) {
 		this.outrasinformacoesprivado = outrasinformacoesprivado;
 	}
 
@@ -349,9 +319,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @return long
 	 */
-	@Column(name="coordenador")
-	public long getCoordenador()
-	{
+	@Column(name = "coordenador")
+	public long getCoordenador() {
 		return coordenador;
 	}
 
@@ -360,9 +329,8 @@ public class Colaborador implements Serializable
 	 * 
 	 * @param coordenador
 	 */
-	public void setCoordenador(long coordenador)
-	{
+	public void setCoordenador(long coordenador) {
 		this.coordenador = coordenador;
 	}
-	
+
 }

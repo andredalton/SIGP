@@ -8,14 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="noticias")
-public class Noticias implements Serializable
-{
+@Table(name = "noticias")
+public class Noticias implements Serializable {
 	protected long id;
 
 	protected String noticia;
 
-	protected String tipo;
+	protected TipoNoticia tipo;
 
 	protected String url;
 
@@ -25,8 +24,7 @@ public class Noticias implements Serializable
 	 * Method 'Noticias'
 	 * 
 	 */
-	public Noticias()
-	{
+	public Noticias() {
 	}
 
 	/**
@@ -35,9 +33,8 @@ public class Noticias implements Serializable
 	 * @return long
 	 */
 	@Id
-	@Column(name="id")
-	public long getId()
-	{
+	@Column(name = "id")
+	public long getId() {
 		return id;
 	}
 
@@ -46,8 +43,7 @@ public class Noticias implements Serializable
 	 * 
 	 * @param id
 	 */
-	public void setId(long id)
-	{
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -56,9 +52,8 @@ public class Noticias implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="noticia")
-	public String getNoticia()
-	{
+	@Column(name = "noticia")
+	public String getNoticia() {
 		return noticia;
 	}
 
@@ -67,8 +62,7 @@ public class Noticias implements Serializable
 	 * 
 	 * @param noticia
 	 */
-	public void setNoticia(String noticia)
-	{
+	public void setNoticia(String noticia) {
 		this.noticia = noticia;
 	}
 
@@ -77,9 +71,8 @@ public class Noticias implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="tipo")
-	public String getTipo()
-	{
+	@Column(name = "tipo")
+	public TipoNoticia getTipo() {
 		return tipo;
 	}
 
@@ -88,8 +81,7 @@ public class Noticias implements Serializable
 	 * 
 	 * @param tipo
 	 */
-	public void setTipo(String tipo)
-	{
+	public void setTipo(TipoNoticia tipo) {
 		this.tipo = tipo;
 	}
 
@@ -98,9 +90,8 @@ public class Noticias implements Serializable
 	 * 
 	 * @return String
 	 */
-	@Column(name="url")
-	public String getUrl()
-	{
+	@Column(name = "url")
+	public String getUrl() {
 		return url;
 	}
 
@@ -109,8 +100,7 @@ public class Noticias implements Serializable
 	 * 
 	 * @param url
 	 */
-	public void setUrl(String url)
-	{
+	public void setUrl(String url) {
 		this.url = url;
 	}
 
@@ -119,9 +109,8 @@ public class Noticias implements Serializable
 	 * 
 	 * @return byte[]
 	 */
-	@Column(name="imagem")
-	public byte[] getImagem()
-	{
+	@Column(name = "imagem")
+	public byte[] getImagem() {
 		return imagem;
 	}
 
@@ -130,8 +119,7 @@ public class Noticias implements Serializable
 	 * 
 	 * @param imagem
 	 */
-	public void setImagem(byte[] imagem)
-	{
+	public void setImagem(byte[] imagem) {
 		this.imagem = imagem;
 	}
 
