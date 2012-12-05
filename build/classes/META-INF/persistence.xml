@@ -11,7 +11,6 @@
 		<class>br.usp.ime.sigp.modelo.Colaborador</class>
 		<class>br.usp.ime.sigp.modelo.ColaboradorXPublicacao</class>
 		<class>br.usp.ime.sigp.modelo.Comentarios</class>
-		<class>br.usp.ime.sigp.modelo.Coordenador</class>
 		<class>br.usp.ime.sigp.modelo.Disciplina</class>
 		<class>br.usp.ime.sigp.modelo.EhMembroDe</class>
 		<class>br.usp.ime.sigp.modelo.Financiador</class>
@@ -47,7 +46,6 @@
 		<class>br.usp.ime.sigp.modelo.Colaborador</class>
 		<class>br.usp.ime.sigp.modelo.ColaboradorXPublicacao</class>
 		<class>br.usp.ime.sigp.modelo.Comentarios</class>
-		<class>br.usp.ime.sigp.modelo.Coordenador</class>
 		<class>br.usp.ime.sigp.modelo.Disciplina</class>
 		<class>br.usp.ime.sigp.modelo.EhMembroDe</class>
 		<class>br.usp.ime.sigp.modelo.Financiador</class>

@@ -21,7 +21,7 @@
      </named-query>
      
 	<named-query name="selectCollaborators">
-          <query>SELECT obj FROM Colaborador obj WHERE obj.id.tipodecolaborador LIKE ? AND obj.id.id != 18</query>
+          <query>SELECT obj FROM Colaborador obj WHERE obj.id.tipodecolaborador LIKE ? AND obj.id.coordenador != 1</query>
     </named-query>
      
     <named-query name="selectCollaboratorsOthers">
@@ -29,7 +29,7 @@
     </named-query>
     
     <named-query name="selectCollaboratorsCoordinators">
-          <query>SELECT obj FROM Colaborador obj WHERE obj.id.id = 18</query>
+          <query>SELECT col FROM Colaborador as col WHERE col.coordenador = 1</query>
     </named-query>
     
     <named-query name="selectPublications">
