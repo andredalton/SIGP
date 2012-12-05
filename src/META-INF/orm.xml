@@ -32,4 +32,7 @@
           <query>SELECT obj FROM Colaborador obj WHERE obj.id.id = 18</query>
     </named-query>
     
+    <named-query name="selectPublications">
+          <query>SELECT pub FROM Publicacao pub</query>
+    </named-query>
 </entity-mappings>

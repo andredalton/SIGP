@@ -2,6 +2,7 @@ package br.usp.ime.sigp.modelo;
 
 import java.io.Serializable;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -65,7 +66,7 @@ public class Publicacao implements Serializable
 
 	protected String citacaourl;
 
-	protected long citacoes;
+	protected Long citacoes;
 
 	/**
 	 * Method 'Publicacao'
@@ -659,7 +660,7 @@ public class Publicacao implements Serializable
 	 * 
 	 * @param citacoes
 	 */
-	public void setCitacoes(long citacoes)
+	public void setCitacoes(Long citacoes)
 	{
 		this.citacoes = citacoes;
 	}
