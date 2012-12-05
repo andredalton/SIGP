@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="default">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-	
+
 		<class>br.usp.ime.sigp.modelo.Dados</class>
 		<class>br.usp.ime.sigp.modelo.DadosdoGrupodePesquisa</class>
 		<class>br.usp.ime.sigp.modelo.Noticias</class>
@@ -26,7 +26,7 @@
 		<class>br.usp.ime.sigp.modelo.Topico</class>
 		<class>br.usp.ime.sigp.modelo.TopicoXPublicacao</class>
 		<class>br.usp.ime.sigp.modelo.Usuario</class>
-		
+
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.connection.url" value="jdbc:mysql://ken/sigp" />
@@ -35,10 +35,10 @@
 			<property name="hibernate.connection.password" value="sigp" />
 		</properties>
 	</persistence-unit>
-	
+
 	<persistence-unit name="vraptor">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-	
+
 		<class>br.usp.ime.sigp.modelo.Dados</class>
 		<class>br.usp.ime.sigp.modelo.DadosdoGrupodePesquisa</class>
 		<class>br.usp.ime.sigp.modelo.Noticias</class>
@@ -61,7 +61,7 @@
 		<class>br.usp.ime.sigp.modelo.Topico</class>
 		<class>br.usp.ime.sigp.modelo.TopicoXPublicacao</class>
 		<class>br.usp.ime.sigp.modelo.Usuario</class>
-		
+
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.connection.url" value="jdbc:mysql://ken/sigp" />
