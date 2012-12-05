@@ -12,15 +12,15 @@
 <div id="wrapper">
 	<div id="content" class="cont-left">
 		<div id="contents">
-			<c:forEach items="${publications}" var="publication">
-				<ul>
+			<ol>
+				<c:forEach items="${publications}" var="publication">
 					<li>
 						<a href="<c:url value='/publication/'></c:url>${publication.id}">
 							${publication.titulo}
 						</a>
 					</li>
-				</ul>
-			</c:forEach>
+				</c:forEach>
+			</ol>
 		</div>
 	</div>
 </div>

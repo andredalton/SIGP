@@ -2,6 +2,7 @@ package br.usp.ime.sigp.dao;
 
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
@@ -9,6 +10,7 @@ import br.com.caelum.vraptor.ioc.Component;
 import br.usp.ime.sigp.jpa.BaseEntityString;
 import br.usp.ime.sigp.jpa.JPAFactory;
 import br.usp.ime.sigp.modelo.Colaborador;
+import br.usp.ime.sigp.modelo.Publicacao;
 
 @Component
 public class GenericDAOString {
@@ -71,6 +73,12 @@ public class GenericDAOString {
 		person = (Colaborador) manager.find(person.getClass(),
 				person.getId());
 		return person;
+	}
+
+	public Publicacao selectById(Publicacao publication) {
+		publication = (Publicacao) manager.find(publication.getClass(),
+				publication.getId());
+		return publication;
 	}
 
 }
