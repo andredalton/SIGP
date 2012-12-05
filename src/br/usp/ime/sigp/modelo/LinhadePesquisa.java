@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="LinhadePesquisa")
+@Table(name="linhadepesquisa")
 public class LinhadePesquisa implements Serializable
 {
 	protected String nome;

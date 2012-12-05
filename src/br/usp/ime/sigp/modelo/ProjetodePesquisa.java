@@ -12,11 +12,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ProjetodePesquisa")
+@Table(name="projetodepesquisa")
 public class ProjetodePesquisa implements Serializable
 {
 	protected ProjetodePesquisaPk id;
-
+	
 	protected String descricao;
 
 	protected String url;
@@ -55,7 +55,7 @@ public class ProjetodePesquisa implements Serializable
 	{
 		this.id = id;
 	}
-
+	
 	/**
 	 * Method 'getDescricao'
 	 * 

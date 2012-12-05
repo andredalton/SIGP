@@ -35,4 +35,9 @@
     <named-query name="selectPublications">
           <query>SELECT pub FROM Publicacao pub</query>
     </named-query>
+    
+    <named-query name="selectProjects">
+          <query>SELECT proj FROM ProjetodePesquisa proj</query>
+    </named-query>
+    
 </entity-mappings>
