@@ -39,6 +39,8 @@ public class Colaborador implements Serializable
 
 	protected String outrasinformacoesprivado;
 
+	protected long coordenador;
+	
 	/**
 	 * Method 'Colaborador'
 	 * 
@@ -342,4 +344,25 @@ public class Colaborador implements Serializable
 		this.outrasinformacoesprivado = outrasinformacoesprivado;
 	}
 
+	/**
+	 * Method 'getCoordenador'
+	 * 
+	 * @return long
+	 */
+	@Column(name="coordenador")
+	public long getCoordenador()
+	{
+		return coordenador;
+	}
+
+	/**
+	 * Method 'setCoordenador'
+	 * 
+	 * @param coordenador
+	 */
+	public void setCoordenador(long coordenador)
+	{
+		this.coordenador = coordenador;
+	}
+	
 }
