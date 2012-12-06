@@ -39,14 +39,13 @@
 			
 			<div style="display: inline-block;">
 				<h2>Publications</h2>
+				
+				${person}
+				
 			</div>
 			
 		</div>
 	</div>
-	
-	
-	
-	
 </div>  
 
 

@@ -2,9 +2,17 @@ package br.usp.ime.sigp.modelo;
 
 import java.io.Serializable;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -40,6 +48,12 @@ public class Colaborador implements Serializable
 	protected String outrasinformacoesprivado;
 
 	protected long coordenador;
+
+	@ManyToMany(cascade = {CascadeType.ALL})
+	@JoinTable(name="ColaboradorXPublicacao",
+		joinColumns={@JoinColumn(name="idColaborador")},
+		inverseJoinColumns={@JoinColumn(name="idPublicacao")})
+	private Set<Publicacao> publicacaos = new HashSet<Publicacao>();
 	
 	/**
 	 * Method 'Colaborador'
