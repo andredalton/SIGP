@@ -10,6 +10,35 @@
 
 <div id="wrapper">
 	<div id="content" class="cont-left">
+		<c:forEach items="${projects}" var="project">
+			<div class="post-title">
+				<h3>
+					<a href="<c:url value='/project/'></c:url>${project.id.nome}">
+						${project.id.nome}
+					</a>
+				</h3>
+			</div>
+			
+			<div class="post-content">
+				<p>
+					${project.descricao}
+				</p>
+				
+				<div class="post-metadata">
+					<p>
+						Project website: 
+						<a href="${project.url}" target="_blank">
+							${project.url}
+						</a>
+					</p>
+				</div>
+				
+				<a class="button" href="publications.jsf">View publications</a>
+			</div>
+			
+			<div class="separator"></div> 
+		</c:forEach>
+	
 		<a name="metricminer"></a>
 		<div class="blog-post">
 			<div class="post-title">

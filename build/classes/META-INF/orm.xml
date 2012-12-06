@@ -39,8 +39,13 @@
     <named-query name="selectPublications">
           <query>SELECT pub FROM Publicacao pub</query>
     </named-query>
-    
+
     <named-query name="selectUsuario">
           <query>SELECT obj FROM Usuario as obj WHERE login = ? AND senha = MD5(?)</query>
     </named-query>
+
+    <named-query name="selectProjects">
+          <query>SELECT proj FROM ProjetodePesquisa proj</query>
+    </named-query>
+    
 </entity-mappings>
