@@ -32,6 +32,10 @@
           <query>SELECT col FROM Colaborador as col WHERE col.coordenador = 1</query>
     </named-query>
     
+    <named-query name="selectCollaboratorsPublications">
+          <query>SELECT pul FROM ColaboradorXPublicacao pul WHERE pul.id.idColaborador = ?</query>
+    </named-query>
+    
     <named-query name="selectPublications">
           <query>SELECT pub FROM Publicacao pub</query>
     </named-query>

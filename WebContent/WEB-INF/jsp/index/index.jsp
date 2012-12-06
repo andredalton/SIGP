@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+	import="java.io.*,java.util.*" %>
 <!----------- TITLE ---------->
 <div id="page-headline">
 	<div id="page-headline-inner">  
@@ -14,7 +16,7 @@
 <div id="wrapper">
 	<div id="content" class="cont-left">        
 		<div class="box-title">
-			<img src="images/gerosa.jpg" alt="Marco Aurélio Gerosa" class=left>
+			<img src="images/gerosa.jpg" alt="Marco AurÃ©lio Gerosa" class=left>
 			<h3>About Us</h3>
 		</div>
 		<!-- end box-title -->

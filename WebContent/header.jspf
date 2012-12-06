@@ -71,6 +71,14 @@
 </head>
 
 <body>
+	<%
+	out.print(session.getId());
+	
+	if(session.getId()==null)
+		out.print("<br />Loga aeeeee!");
+	else
+		out.print("<br />Ehhhh nois!");
+	%>
 	<div id="header" class="pattern-1">
 		<div id="header-inner">
 			<!--
@@ -200,13 +208,13 @@
                 -->
                 
                 <li>
-                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'login'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/login/'></c:url>" <c:if test="${headername == 'login'}">class="active-nav"</c:if>>
                     	Login
                     </a>
                 </li>
                 
                 <li>
-                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'logout'}">class="active-nav"</c:if>>
+                    <a href="<c:url value='/logout/'></c:url>" <c:if test="${headername == 'logout'}">class="active-nav"</c:if>>
                     	Logout
                     </a>
                 </li>
