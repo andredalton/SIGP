@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import br.usp.ime.sigp.jpa.BaseEntityString;
+
 @Entity
 @Table(name="usuario")
 public class Usuario implements Serializable
@@ -91,5 +93,4 @@ public class Usuario implements Serializable
 	{
 		this.colaborador = colaborador;
 	}
-
 }

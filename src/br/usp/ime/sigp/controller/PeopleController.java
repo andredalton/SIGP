@@ -3,7 +3,6 @@ package br.usp.ime.sigp.controller;
 import java.util.List;
 
 import br.com.caelum.vraptor.Path;
-//import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.usp.ime.sigp.dao.GenericDAOString;
