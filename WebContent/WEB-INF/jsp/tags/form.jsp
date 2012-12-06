@@ -1,23 +1,21 @@
-<%@page contentType="text/html"%>
-<%@page pageEncoding="iso-8859-1"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  
 <html>
      <head>
           <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
-          <title>VRaptor - Marcador : Lista</title>
+          <title>SIGP - New tag</title>
      </head>
      <body>
           <center>
                <div style="width: 400; text-align: left;">
-                    <a href="<c:url value="/marcador/lista"/>">Voltar</a>
+                    <a href="<c:url value="/tags/"/>">Back</a>
                </div>
-               <form action="<c:url value="/marcador/salvar"/>" method="post">
+               <form action="<c:url value="/tag/save"/>" method="post">
                     <table width="400">
                          <tr>
-                              <td width="100" align="right">Nome</td>
-                              <td width="300"><input name="marcador.id" type="text" value="${marcador.id}"> </td>
+                              <td width="50%" align="right">Nome</td>
+                              <td width="50%" align="left"><input name="marcador.id" type="text" value="${marcador.id}"> </td>
                          </tr>
                          <tr>
                               <td colspan="2" align="right">

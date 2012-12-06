@@ -3,25 +3,27 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Nome</th>
+					<th>Name</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${marcadors}" var="marcador">
 					<tr>
 						<td>${marcador.id}</td>
-						<form action="<c:url value="/marcador/editar/${marcador.id}"/>">
-							<td><input type="submit" value="Editar" /></td>
+						<form action="<c:url value="/tag/edit/${marcador.id}"/>" method="GET">
+							<td><input type="submit" value="Edit" /></td>
 						</form>
-						<form action="<c:url value="/marcador/excluir/${marcador.id}"/>" method="POST">
-							<input type="hidden" name="_method" value="DELETE" />
-							<td><input type="submit" value="Remover" /></td>
+						<form action="<c:url value="/tag/delete/${marcador.id}"/>" method="GET">
+							<td><input type="submit" value="Delete" /></td>
 						</form>
-						<form action="<c:url value="/marcador/editartopico/${marcador.id}"/>">
-							<td><input type="submit" value="Tópico" /></td>
+						<form action="<c:url value="/tag/topic/${marcador.id}"/>" method="GET">
+							<td><input type="submit" value="Topic" /></td>
 						</form>
 					</tr>
 				</c:forEach>
+					<tr>
+						<a href="<c:url value="/tag/new/"/>">New tag</a>
+					</tr>
 			</tbody>
 		</table>
 	</div>

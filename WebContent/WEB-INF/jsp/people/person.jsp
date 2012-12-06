@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="fotoCurriculo">
-			<img src="<c:url value='/images/colaborator.jpg'/>" class="colaboradorFoto" title="${person.apelido}" alt="${person.apelido}" />
+			<img src="<c:url value='/img/avatar.jpg'/>" class="colaboradorFoto" title="${person.apelido}" alt="${person.apelido}" />
 		</div>
 		<div id="curriculo">
 			<p>

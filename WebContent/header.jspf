@@ -159,6 +159,19 @@
 					<c:if test="${headername == 'contato'}">class="active-nav"</c:if>>
 						Contact </a></li>
 
+				<!-- 
+                <li>
+                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
+                    	Org
+                    </a>
+                </li>
+                -->
+				<c:choose>
+					<c:when test="${userInfo.usuario == null}">
+				<li><a href="<c:url value='/login/'></c:url>"> Login </a></li>
+					</c:when>
+					
+					<c:otherwise>
 				<li><a href="<c:url value='/adm/'></c:url>"
 					<c:if test="${headername == 'adm'}">class="active-nav"</c:if>>
 						Administration </a> <br /> <br />
@@ -176,22 +189,9 @@
 								Reserch Groups Associates </a></li>
 						<li><a href="<c:url value='/noticias/lista'></c:url>">
 								News </a></li>
-					</ul></li>
-
-				<!-- 
-                <li>
-                    <a href="<c:url value='/org/'></c:url>" <c:if test="${headername == 'org'}">class="active-nav"</c:if>>
-                    	Org
-                    </a>
-                </li>
-                -->
-				<c:choose>
-					<c:when test="${userInfo.usuario == null}">
-      				<li><a href="<c:url value='/login/'></c:url>"> Login </a></li>
-					</c:when>
-					
-					<c:otherwise>
-      				<li><a href="<c:url value='/logout/'></c:url>">Logout</a></li>
+					</ul>
+				</li>
+      			<li><a href="<c:url value='/logout/'></c:url>">Logout</a></li>
 					</c:otherwise>
 				</c:choose>
 
