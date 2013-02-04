@@ -11,6 +11,42 @@
 
 <div id="wrapper">
 	<div id="content" class="cont-left">
+		<div id="container">
+			<div id="article">
+				<div id="aside" class="one-sixth">
+					<ul id="yearsList">
+						<li class="off">
+							<div class="menuTitle">By year</div>
+						</li>
+						<c:forEach items="${years}" var="y">
+						    <li>
+						    	<a href="<c:url value='/publicacao/by-year/${y.value}'/>">
+						    		${y.key} (${y.value})
+						    	</a>
+						    </li>
+						</c:forEach>
+					</ul>
+				</div>
+				<div style="display: inline-block; width: 450px">
+					<h2>Publications</h2>
+					<ol class="custom-list">
+						<c:forEach items="${publications}" var="publication">
+							<li>
+								<strong>
+									<a href="<c:url value='/publication/'></c:url>${publication.id}">
+										${publication.titulo}
+									</a>
+								</strong>
+							</li>
+						</c:forEach>
+					</ol>
+				</div>
+			</div> <!-- end Article -->
+			<div class="breakLine"></div>
+			<div class="sectionLine"></div>
+		</div> <!-- Container -->
+	
+	
 		<div id="contents">
 			<ol>
 				<c:forEach items="${publications}" var="publication">
