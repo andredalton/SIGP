@@ -5,7 +5,7 @@ Banco de dados.
 	A importacao deve ocorrer via linha de comando.
 
 Acesso ao banco de dados
-	O acesso esta configurado no arquivo src/WEB/persistence.xml;
+	O acesso esta configurado no arquivo src/META-INF/persistence.xml;
 	E necessario configurar adequadamente o nome de usuario, senha e host;
 	No arquivo padrao eles sao respectivamente:
 		sigp, sigp, localhost
