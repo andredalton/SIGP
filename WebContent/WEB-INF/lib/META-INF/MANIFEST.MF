@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: 1.5.0_09 (Sun Microsystems Inc.)
+Built-By: janb
+Build-Jdk: 1.5.0_09
+implementation-version: 6.1.5
+mode: development
+package: org.mortbay
+url: http://jetty.mortbay.org
+Bundle-License: https://glassfish.dev.java.net/public/CDDLv1.0.html
+Import-Package: javax.servlet;version=2.5,javax.servlet.http;version=2
+ .5,javax.servlet.jsp.resources;version=2.5,javax.servlet.resources;ve
+ rsion=2.5
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Specification-Version: 2.5
+Bnd-LastModified: 1185170520883
+Export-Package: javax.servlet.http;uses:=javax.servlet;version=2.5,jav
+ ax.servlet;version=2.5,javax.servlet.resources;version=2.5,javax.serv
+ let.jsp.resources;version=2.5
+Bundle-Version: 2.5
+Bundle-Name: Servlet Specification 2.5 API
+Bundle-Description: Servlet Specification 2.5 API
+Bundle-DocURL: http://www.mortbay.com
+Originally-Created-By: 1.5.0_09 (Sun Microsystems Inc.)
+Bundle-Vendor: Mort Bay Consulting
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.mortbay.jetty.servlet-api-2.5
+Tool: Bnd-0.0.160
+Implementation-Vendor: JCP
+

@@ -2,9 +2,9 @@ package br.usp.ime.sigp;
 
 import br.usp.ime.sigp.modelo.Usuario;
 
-public class UserInfo {
+public class UserInfo{
 	private Usuario usuario;
-
+	
 	public Usuario getUsuario() {
 		return usuario;
 	}

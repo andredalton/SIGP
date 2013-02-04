@@ -33,7 +33,6 @@ import br.usp.ime.sigp.modelo.Usuario;
 import java.io.UnsupportedEncodingException;
 import java.security.*;
 
-
 @Resource
 public class LoginController {
 	private final GenericDAOString dao;
