@@ -18,6 +18,97 @@ package br.usp.ime.sigp.controller;
 
 import java.util.List;
 
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import br.com.caelum.vraptor.Path;
+import br.com.caelum.vraptor.Post;
+import br.com.caelum.vraptor.Resource;
+import br.com.caelum.vraptor.Result;
+import br.usp.ime.sigp.IndexController;
+import br.usp.ime.sigp.dao.GenericDAOString;
+import br.usp.ime.sigp.modelo.Usuario;
+
+@Resource
+public class LoginController {
+	private final GenericDAOString dao;
+	private Usuario usuario;
+	private final Result result;
+
+	//public LoginController(Result result, Usuario info, GenericDAOString dao) {
+	public LoginController(Result result, GenericDAOString dao) {
+		this.dao = dao;
+		this.result = result;
+	}
+	/*
+	public LoginController(Result result) {
+		this.result = result;
+		this.dao = null;
+	}
+	*/
+	
+	
+	
+	
+	@Path({"/login/", "/login"})
+	public void index() {
+		result.include("variable", "VRaptor!");
+	}
+		
+	@Post
+	@Path({"/login/validate/", "/login/validate"})
+	public void login(String username, String password) {
+		byte[] bytesOfMessage = null;
+		MessageDigest md = null;
+		try {
+			bytesOfMessage = password.getBytes("UTF-8");
+			md = MessageDigest.getInstance("MD5");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		byte[] thedigest = md.digest(bytesOfMessage);
+		
+		List users = dao.selectByNamedQuery("selectUsuario", username, password);
+		if(users.size() != 1) {
+			// Xiii....
+			result.redirectTo(LoginController.class).index();
+			return;
+		}
+		Usuario user = (Usuario) users.get(0);
+		this.setUsuario(user);
+		
+		result.redirectTo(IndexController.class).index();
+	}
+	
+	@Path({"/logout/", "/logout"})
+	public void logout() {
+		this.setUsuario(null);
+		result.redirectTo(IndexController.class).index();
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+}
+
+
+
+
+/*
+package br.usp.ime.sigp.controller;
+
+import java.util.List;
+
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
@@ -39,17 +130,6 @@ public class LoginController {
 	private final Result result;
 	private UserInfo info;
 	private Usuario usuario;
-	
-	public LoginController(Result result, UserInfo info, GenericDAOString dao) {
-		this.dao = dao;
-		this.info = info;
-		this.result = result;
-	}
-
-	@Path({"/login/", "/login"})
-	public void index() {
-		result.include("variable", "VRaptor!");
-	}
 	
 	@Post
 	@Path({"/login/validate/", "/login/validate"})
@@ -80,10 +160,5 @@ public class LoginController {
 		
 		result.redirectTo(IndexController.class).index();
 	}
-	
-	@Path({"/logout/", "/logout"})
-	public void logout() {
-		info.setUsuario(null);
-		result.redirectTo(IndexController.class).index();
-	}
 }
+*/
