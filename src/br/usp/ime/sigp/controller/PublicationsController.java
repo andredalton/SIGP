@@ -4,6 +4,7 @@ import java.util.List;
 
 
 
+
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
@@ -11,6 +12,7 @@ import br.com.caelum.vraptor.Result;
 import br.usp.ime.sigp.dao.GenericDAOString;
 import br.usp.ime.sigp.jpa.BaseEntityString;
 import br.usp.ime.sigp.modelo.Publicacao;
+import br.usp.ime.sigp.dao.PublicacaoDao;
 
 @Resource
 public class PublicationsController {
@@ -26,6 +28,7 @@ public class PublicationsController {
     public void index() {
     	List<BaseEntityString> publications = dao.selectByNamedQuery("selectPublications");
         result.include("publications", publications);
+        /*result.include("years", this.pdao.years_with_publication());*/
     }
     
     @Path("/publication/{publication.id}")
