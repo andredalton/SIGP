@@ -39,7 +39,7 @@
 			<li>Gerosa, M.A., Fuks, H.,, Lucena, C.J.P. (2003), "Suporte à Percep&ccedil;&atilde;o em Ambientes de Aprendizagem Colaborativa", Revista Brasileira de Inform&aacute;tica na Educa&ccedil;&atilde;o, V. 11, No. 2, Julho/Dezembro 2003, ISSN 1414-5685, Sociedade Brasileira de Computa&ccedil;&atilde;o, p. 75-85.</li>
 		</ul>
 		<hr />
-		<a class="button" href="publications.jsf">View all publications</a>
+		<a class="button" href="<c:url value='/publications/'></c:url>">View all publications</a>
 		<div class="separator"></div>   
 
 		<h3>Computer Supported Communication</h3>
@@ -61,7 +61,7 @@
 			<li>Fuks, H., Gerosa, M.A., Pimentel, M., Filippo, D., Lucena, C.J.P. (2005), "Informa&ccedil;&otilde;es Estat&iacute;sticas e Visuais para a Media&ccedil;&atilde;o de F&oacute;runs Educacionais", Revista Brasileira de Inform&aacute;tica na Educa&ccedil;&atilde;o, V. 13, No. 3, Setembro-Novembro 2005, ISSN 1414-5685, Sociedade Brasileira de Computa&ccedil;&atilde;o, p. 19-32. </li>
 		</ul>
 		<hr />
-		<a class="button" href="publications.jsf">View all publications</a>
+		<a class="button" href="<c:url value='/publications/'></c:url>">View all publications</a>
 		<div class="separator"></div>   
 
 		<h3>Collaboration Modeling</h3>
@@ -76,7 +76,7 @@
 			<li>Fuks, H., Raposo, A., Gerosa, M.A., Pimentel, M., Fillippo D., Lucena, C.J.P. (2011) "Teorias e modelos de colabora&ccedil;&atilde;o". Sistemas Colaborativos, Pimentel, M., Fuks, H. (orgs), Editora Campus, Elsevier, Sociedade Brasileira de Computa&ccedil;&atilde;o (SBC), ISBN 978-85-352-4669-8, p. 16-33. </li>
 		</ul>
 		<hr />
-		<a class="button" href="publications.jsf">View all publications</a>
+		<a class="button" href="<c:url value='/publications/'></c:url>">View all publications</a>
 		<div class="separator"></div>   
 	</div>
 </div>

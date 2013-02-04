@@ -450,29 +450,29 @@ ol li {
 
 #logoWrapper {
 	margin-bottom: 10px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #logo {
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 10px;
 }
 
 #title {
 	display: inline-block;
 	vertical-align: top;
-	height: 30px;
-	padding-top: 10px;
+	height: 50px;
 }
 
 #title h1 {
 	font-family: Bebas, Arial, sans-serif;	
 	color: #f7f7f7;
-	font-size: 20px;
+	font-size: 14px;
 	text-shadow: 1px 1px 1px #262626;
 	letter-spacing: 1px;
 	font-weight: normal;
-	height: 100%;
 }
 
 #title h1 a {
@@ -488,7 +488,11 @@ ol li {
 =======================================================*/
 
 #navigation {
+	padding-top: 20px;
 	z-index: 1200;
+	display: inline-block;
+	vertical-align: top;
+	width: 750px;
 }
 
 #navigation li {
@@ -503,6 +507,7 @@ ol li {
 	-o-transition: background-color .2s linear;
 	-ms-transition: background-color .2s linear;
 	transition: background-color .2s linear;
+	text-transform: uppercase;
 }
 
 #navigation li:hover {
@@ -514,7 +519,6 @@ ol li {
 	font-family: Bebas, Arial, sans-serif;	
 	font-size: 18px;
 	color: #f7f7f7;
-	text-decoration: none;
 	padding: 10px;
 	display: inline-block;	
 	margin-bottom: 0px;			

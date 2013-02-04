@@ -25,7 +25,7 @@
 			<li>Fontoura, V.D., Steinmacher, I., Wiese, I.S., Gerosa, M. A. (2011) "Predi&ccedil;&atilde;o de falhas em projetos de software baseado em m&eacute;tricas de redes sociais de comunica&ccedil;&atilde;o e coopera&ccedil;&atilde;o". Anais do VIII Simp&oacute;sio Brasileiro de Sistemas Colaborativos (SBSC 2011), 5-7 de Outubro, Parati-RJ, ISBN 9788576692546, p. 37-40.</li>
 		</ul>
 		
-		<a class="button" href="publications.jsf">View all publications</a>
+		<a class="button" href="<c:url value='/publications/'></c:url>">View all publications</a>
 
 		<a name="groupware"></a>
 		<div class="separator"></div>   
@@ -78,7 +78,7 @@
 			<li>Ben Hamida, A., Kon, F., Ansaldi Oliva, G., Dos Santos, C., Lorr&eacute;, J.-P., Autili, M., De Angelis, G., Zarras, A., Georgantas, N., Issarny, V., and Bertolino, A. An integrated development and runtime environment for the future internet. In: The Future Internet, F. &aacute;lvarez et al. (eds), vol. 7281 of Lecture Notes in Computer Science. Springer Berlin / Heidelberg, 2012, pp. 81–92. 10.1007/978-3-642-30241-1_8.</li>
 		</ul>
 		<hr />
-		<a class="button" href="publications.jsf">View all publications</a>
+		<a class="button" href="<c:url value='/publications/'></c:url>">View all publications</a>
 
 		<a name="others"></a>
 		<div class="separator"></div>   
@@ -92,9 +92,9 @@
 			<li>Aniche, M.F., Ferreira, T.M., Gerosa, M. A. (2011) "What Concerns Beginner Test-Driven Development Practitioners: A Qualitative Analysis of Opinions". Workshop Brasileiro de M&eacute;todos &aacute;geis (Agile Brazil 2011), 27 de Junho a 01 de Julho, Fortaleza-CE.</li>
 			<li>Diana, M., Gerosa, M. A. "NOSQL na Web 2.0: Um Estudo Comparativo de Bancos N&atilde;o-Relacionais para Armazenamento de Dados na Web 2.0", Workshop de Teses e Disserta&ccedil;&otilde;es em Banco de Dados - XXV Simp&oacute;sio Brasileiro de Banco de Dados (SBBD 2010), Belo Horizonte-MG. 5-8 de Outubro.</li>
 		</ul>
-		<a class="button" href="publications.jsf">View all publications</a>
+		<a class="button" href="<c:url value='/publications/'></c:url>">View all publications</a>
 		
 		<div class="separator"></div>   
-		<a class="button" href="previous_research_lines.jsf">See also our previous research lines</a>
+		<a class="button" href="<c:url value='/lines/previous'></c:url>">See also our previous research lines</a>
 	</div>
 </div>

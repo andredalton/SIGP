@@ -127,8 +127,7 @@
 						alt="LAPPESC" />
 				</div>
 				<div id="title">
-					<h1>Software Engineering & Collaborative Systems Research Lab
-					</h1>
+					<h1>Software Engineering &<br />Collaborative Systems Research Lab</h1>
 				</div>
 				<!-- end title -->
 			</div>
@@ -199,9 +198,6 @@
 
 
 			<!-- end navigation -->
-
-			<div class="clear"></div>
-			<!-- end clearfix -->
 		</div>
 	</div>
 
