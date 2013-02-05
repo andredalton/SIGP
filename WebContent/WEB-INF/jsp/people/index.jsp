@@ -10,7 +10,7 @@
 
 <div id="wrapper">
 	<div id="content" class="cont-left">
-		<c:choose>
+		<!--<c:choose>
 			<c:when test="${isUser}">
 				<div id="side-contents">
 					<fmt:message key="misc.acoes"></fmt:message>
@@ -21,12 +21,18 @@
 			<c:otherwise>
 				<div id="side-contents" class="hidden"></div>
 			</c:otherwise>
-		</c:choose>
+		</c:choose>-->
     
 		<div id="contents">
-			<c:when test="${isUser}">
-				<a href="#">Add Collaborator</a>
-			</c:when>
+			<%
+				if (isUser) {
+			%>
+				<a href="<c:url value='/people/new'></c:url>">Add Collaborator</a>
+				<div class="separator"></div>
+			<%
+				}
+			%>
+			
 			
 			<h3>Coordinators</h3>
 			

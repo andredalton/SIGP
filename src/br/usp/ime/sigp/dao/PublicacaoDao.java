@@ -2,7 +2,6 @@ package br.usp.ime.sigp.dao;
 
 import java.math.BigInteger;
 
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
@@ -22,12 +21,19 @@ import br.usp.ime.sigp.modelo.Publicacao;
 
 @Component
 public class PublicacaoDao {
+	
 	private final Session session;
 
 	public PublicacaoDao(Session session) {
 		this.session = session;
 	}
-
+	
+	public void save(Publicacao publicacao) {
+		Transaction tx = session.beginTransaction();
+		session.save(publicacao);
+		tx.commit();
+	}
+	/*
 	public Publicacao getPublicacao(Long id) {
 		return (Publicacao) session.get(Publicacao.class, id);
 	}
@@ -37,17 +43,12 @@ public class PublicacaoDao {
 		return this.session.createCriteria(Publicacao.class).list();
 	}
 	
-	public void save(Publicacao publicacao) {
-		Transaction tx = session.beginTransaction();
-		session.save(publicacao);
-		tx.commit();
-	}
 
 	public void update(Publicacao publicacao) {
 		Transaction tx = session.beginTransaction();
 		session.update(publicacao);
 		tx.commit();
-	}
+	}*/
 
 	/*public void delete(Publicacao publicacao) {
 		Transaction tx = session.beginTransaction();
@@ -57,7 +58,7 @@ public class PublicacaoDao {
 		tx.commit();
 	}*/
 
-	@SuppressWarnings("unchecked")
+	/*@SuppressWarnings("unchecked")
 	public List<Publicacao> list_year(Integer year) {
 		Query query = session.createQuery("from Publicacao where ano = :year ");
 		query.setParameter("year", year);		
@@ -104,6 +105,6 @@ public class PublicacaoDao {
 
         return years;
 	}
-	
+	*/
 	
 }
