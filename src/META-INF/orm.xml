@@ -37,7 +37,7 @@
     </named-query>
     
     <named-query name="selectPublications">
-          <query>SELECT pub FROM Publicacao pub</query>
+          <query>SELECT pub FROM Publicacao pub WHERE pub.id.estado = ?</query>
     </named-query>
 
     <named-query name="selectUsuario">

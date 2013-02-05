@@ -26,7 +26,7 @@ public class PublicationsController {
 
     @Path({"/publications/", "/publications"})
     public void index() {
-    	List<BaseEntityString> publications = dao.selectByNamedQuery("selectPublications");
+    	List<BaseEntityString> publications = dao.selectByNamedQuery("selectPublications", "Publicado");
         result.include("publications", publications);
         /*result.include("years", this.pdao.years_with_publication());*/
     }
