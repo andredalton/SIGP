@@ -37,6 +37,9 @@
 										${publication.titulo}
 									</a>
 								</strong>
+								<c:if test="${publication.titulodaconferenciajornallivrorevista != NULL}">, ${publication.titulodaconferenciajornallivrorevista}</c:if>
+								<c:if test="${publication.ano != NULL}">, ${publication.ano}</c:if>
+								<c:if test="${publication.tipo != NULL}"><strong><i>&nbsp;[${publication.tipo}]</i></strong></c:if>
 							</li>
 						</c:forEach>
 					</ol>
@@ -47,7 +50,7 @@
 		</div> <!-- Container -->
 	
 	
-		<div id="contents">
+		<!-- <div id="contents">
 			<ol>
 				<c:forEach items="${publications}" var="publication">
 					<li>
@@ -57,6 +60,6 @@
 					</li>
 				</c:forEach>
 			</ol>
-		</div>
+		</div> -->
 	</div>
 </div>

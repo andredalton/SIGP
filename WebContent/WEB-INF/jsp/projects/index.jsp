@@ -12,11 +12,7 @@
 	<div id="content" class="cont-left">
 		<c:forEach items="${projects}" var="project">
 			<div class="post-title">
-				<h3>
-					<a href="<c:url value='/project/'></c:url>${project.id.nome}">
-						${project.id.nome}
-					</a>
-				</h3>
+				<h3>${project.id.nome}</h3>
 			</div>
 			
 			<div class="post-content">
