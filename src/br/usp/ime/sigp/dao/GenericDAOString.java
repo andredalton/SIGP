@@ -11,6 +11,7 @@ import br.com.caelum.vraptor.ioc.Component;
 import br.usp.ime.sigp.jpa.BaseEntityString;
 import br.usp.ime.sigp.jpa.JPAFactory;
 import br.usp.ime.sigp.modelo.Colaborador;
+import br.usp.ime.sigp.modelo.ProjetodePesquisa;
 import br.usp.ime.sigp.modelo.Publicacao;
 
 @Component
@@ -82,4 +83,9 @@ public class GenericDAOString {
 		return publication;
 	}
 
+	public ProjetodePesquisa selectById(ProjetodePesquisa project) {
+		project = (ProjetodePesquisa) manager.find(project.getClass(),
+				project.getId());
+		return project;
+	}
 }

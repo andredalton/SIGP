@@ -1,40 +1,50 @@
 <!----------- TITLE ---------->
 <div id="page-headline">
-	<div id="page-headline-inner">  
+	<div id="page-headline-inner">
 		<div id="page-title">
 			<h2>Projects</h2>
-		</div><!-- end page-title -->           
-	</div><!-- end page-headline-inner -->
-	<div class="separator"></div>   
-</div><!-- end page-headline -->
+		</div>
+		<!-- end page-title -->
+	</div>
+	<!-- end page-headline-inner -->
+	<div class="separator"></div>
+</div>
+<!-- end page-headline -->
 
 <div id="wrapper">
 	<div id="content" class="cont-left">
 		<c:forEach items="${projects}" var="project">
 			<div class="post-title">
 				<h3>${project.id.nome}</h3>
+				<%
+					if (isUser != false) {
+				%>
+				<form action="<c:url value="/project/edit/${project.id}"/>"
+					method="POST">
+					<td><input type="submit" value="Edit" /></td>
+				</form>
+				<%
+					}
+				%>
 			</div>
-			
+
 			<div class="post-content">
-				<p>
-					${project.descricao}
-				</p>
-				
+				<p>${project.descricao}</p>
+
 				<div class="post-metadata">
 					<p>
-						Project website: 
-						<a href="${project.url}" target="_blank">
-							${project.url}
-						</a>
+						Project website: <a href="${project.url}" target="_blank">
+							${project.url} </a>
 					</p>
 				</div>
-				
-				<a class="button" href="<c:url value='/publications/'></c:url>">View publications</a>
+
+				<a class="button" href="<c:url value='/publications/'></c:url>">View
+					publications</a>
 			</div>
-			
-			<div class="separator"></div> 
+
+			<div class="separator"></div>
 		</c:forEach>
-	
+
 		<!-- <a name="metricminer"></a>
 		<div class="blog-post">
 			<div class="post-title">
@@ -197,4 +207,4 @@
         <div class="separator"></div> 
 	 -->
 	</div>
-</div>  
+</div>

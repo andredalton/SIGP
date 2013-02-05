@@ -183,11 +183,11 @@
 						Administration </a> <br /> <br />
 					<ul>
 						<li><a href="<c:url value='/tags/'></c:url>"> Tags </a></li>
-						<li><a href="<c:url value='/lines/list'></c:url>">
+						<li><a href="<c:url value='/lines/list/'></c:url>">
 								Reserch Lines </a></li>
-						<li><a href="<c:url value='/dado/lista'></c:url>">
+						<li><a href="<c:url value='/groups/'></c:url>">
 								Reserch Group Data </a></li>
-						<li><a href="<c:url value='/projeto/lista'></c:url>">
+						<li><a href="<c:url value='/projects/'></c:url>">
 								Reserch Project </a></li>
 						<li><a href="<c:url value='/people/'></c:url>">
 								Contributors </a></li>

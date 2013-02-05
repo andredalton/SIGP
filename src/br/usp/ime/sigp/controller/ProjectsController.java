@@ -10,7 +10,9 @@ import br.com.caelum.vraptor.Result;
 import br.usp.ime.sigp.dao.GenericDAOString;
 import br.usp.ime.sigp.jpa.BaseEntityString;
 import br.usp.ime.sigp.modelo.Marcador;
+import br.usp.ime.sigp.modelo.ProjetodePesquisa;
 import br.usp.ime.sigp.modelo.Publicacao;
+import br.usp.ime.sigp.modelo.ProjetodePesquisa;
 
 @Resource
 public class ProjectsController {
@@ -34,5 +36,12 @@ public class ProjectsController {
          if(project != null) {
               result.include("project", project);
          }
+    }
+    
+    @Post
+    @Path("/project/edit/{project.id.nome}")
+    public void edit(String nome) {
+    	List<BaseEntityString> projects = dao.selectByNamedQuery("selectProjectsByName", nome);
+        result.include("project", projects.get(0));
     }
 }
