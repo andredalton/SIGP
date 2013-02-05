@@ -48,4 +48,8 @@
           <query>SELECT proj FROM ProjetodePesquisa proj</query>
     </named-query>
     
+    <named-query name="selectLines">
+          <query>SELECT lin FROM LinhadePesquisa lin</query>
+    </named-query>
+    
 </entity-mappings>
