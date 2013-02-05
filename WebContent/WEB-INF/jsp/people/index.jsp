@@ -11,7 +11,7 @@
 <div id="wrapper">
 	<div id="content" class="cont-left">
 		<c:choose>
-			<c:when test="${userIsLogged}">
+			<c:when test="${isUser}">
 				<div id="side-contents">
 					<fmt:message key="misc.acoes"></fmt:message>
 					<hr />
@@ -24,6 +24,10 @@
 		</c:choose>
     
 		<div id="contents">
+			<c:when test="${isUser}">
+				<a href="#">Add Collaborator</a>
+			</c:when>
+			
 			<h3>Coordinators</h3>
 			
 			<c:forEach items="${coordinators}" var="person">
