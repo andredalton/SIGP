@@ -2,6 +2,8 @@ package br.usp.ime.sigp.controller;
 
 import java.util.List;
 
+import javax.persistence.RollbackException;
+
 
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
@@ -11,6 +13,7 @@ import br.usp.ime.sigp.dao.GenericDAOString;
 import br.usp.ime.sigp.dao.ColaboradorDao;
 import br.usp.ime.sigp.jpa.BaseEntityString;
 import br.usp.ime.sigp.modelo.Colaborador;
+import br.usp.ime.sigp.modelo.Marcador;
 
 @Resource
 public class PeopleController {
@@ -68,4 +71,18 @@ public class PeopleController {
          this.cdao.save(colaborador);
          result.redirectTo(PeopleController.class).index();
     }
+    
+    @Path("/people/edit/{person.id}")
+	public void edit() {
+
+	}
+    
+    @Path("/people/delete/{person.id}")
+	public void delete(Colaborador person) {
+    	person = (Colaborador) dao.selectById(person);
+        if(person != null) {
+             this.cdao.delete(person);
+        }
+		result.redirectTo(this.getClass()).index();
+	}
 }
