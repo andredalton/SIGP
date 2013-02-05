@@ -1,9 +1,12 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="java.io.*,java.util.*,javax.*"%>
+	pageEncoding="UTF-8"
+	import="java.io.*,java.util.*,javax.*, br.usp.ime.sigp.modelo.*"%>
 <%
-	Integer userID = (Integer) session.getAttribute("userID");
+	Boolean isUser = false;
+	if ( session.getAttribute("isUser")=="allow")
+		isUser = true;
 %>
 
 <html>
@@ -127,7 +130,9 @@
 						alt="LAPPESC" />
 				</div>
 				<div id="title">
-					<h1>Software Engineering &<br />Collaborative Systems Research Lab</h1>
+					<h1>
+						Software Engineering &<br />Collaborative Systems Research Lab
+					</h1>
 				</div>
 				<!-- end title -->
 			</div>
@@ -165,12 +170,14 @@
                     </a>
                 </li>
                 -->
-				<c:choose>
-					<c:when test="${userInfo.usuario == null}">
+
+				<%
+					if (isUser == false) {
+				%>
 				<li><a href="<c:url value='/login/'></c:url>"> Login </a></li>
-					</c:when>
-					
-					<c:otherwise>
+				<%
+					} else {
+				%>
 				<li><a href="<c:url value='/adm/'></c:url>"
 					<c:if test="${headername == 'adm'}">class="active-nav"</c:if>>
 						Administration </a> <br /> <br />
@@ -188,11 +195,11 @@
 								Reserch Groups Associates </a></li>
 						<li><a href="<c:url value='/noticias/lista'></c:url>">
 								News </a></li>
-					</ul>
-				</li>
-      			<li><a href="<c:url value='/logout/'></c:url>">Logout</a></li>
-					</c:otherwise>
-				</c:choose>
+					</ul></li>
+				<li><a href="<c:url value='/logout/'></c:url>">Logout</a></li>
+				<%
+					}
+				%>
 
 			</ul>
 

@@ -1,5 +1,2 @@
-<%
-   String userIDKey = new String("userID");
-   session.setAttribute(userIDKey,  null);
-%>
+<%session.invalidate();%>
 <c:redirect url="/" />
