@@ -2,6 +2,8 @@ package br.usp.ime.sigp.controller;
 
 import java.util.List;
 
+import javax.persistence.RollbackException;
+
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
@@ -29,6 +31,7 @@ public class TagsController {
 
 	@Path({ "/tag/new", "/tag/new/" })
 	public void form() {
+
 	}
 
 	@Path({ "/tag/edit/{marcador.id}", "/tag/edit/{marcador.id}/" })
@@ -57,7 +60,12 @@ public class TagsController {
 	@Path({ "/tag/delete/{marcador.id}", "/tag/delete/{marcador.id}/" })
 	public void delete(Marcador marcador) {
 		if (marcador != null && marcador.getId() != null) {
-			dao.remove(marcador);
+			try{
+				dao.remove(marcador);
+			}
+			catch (RollbackException e){
+				
+			}
 		}
 		list();
 		result.redirectTo(this.getClass()).list();

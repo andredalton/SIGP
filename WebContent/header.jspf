@@ -189,7 +189,7 @@
 								Reserch Group Data </a></li>
 						<li><a href="<c:url value='/projeto/lista'></c:url>">
 								Reserch Project </a></li>
-						<li><a href="<c:url value='/colaborador/lista'></c:url>">
+						<li><a href="<c:url value='/people/'></c:url>">
 								Contributors </a></li>
 						<li><a href="<c:url value='/associados/lista'></c:url>">
 								Reserch Groups Associates </a></li>

@@ -20,7 +20,7 @@ public class TopicsController {
 		this.dao = dao;
 	}
 
-	@Path("/topics")
+	@Path({"/topics","/topics/"})
 	public void list() {
 		List<Topico> topicos = dao
 				.selectByNamedQuery("selectTopicos");
